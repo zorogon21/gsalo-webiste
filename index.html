@@ -1,0 +1,1972 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self'; connect-src 'self' https://formsubmit.co;">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<title>G-SALO | Maquinaria Pesada, Medidores y Luminarias — Celaya, Guanajuato</title>
+<meta name="description" content="G-SALO, grupo líder en el Bajío. Venta y renta de maquinaria pesada, medidores de agua NOM, luminarias LED certificadas. Celaya, Guanajuato.">
+<meta name="keywords" content="maquinaria pesada México, medidores de agua NOM, luminarias certificadas, renta maquinaria Bajío, construcción Guanajuato, G-SALO, Celaya, excavadora, bulldozer, motoniveladora">
+<meta name="author" content="G-SALO">
+<meta property="og:title" content="G-SALO | Grupo Empresarial Bajío">
+<meta property="og:description" content="Maquinaria pesada, medidores NOM y luminarias certificadas. Celaya, Guanajuato.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --primary:#1A1A2E;--gold:#C9A84C;--gold-light:#E8C875;
+  --smoke:#F5F5F5;--carbon:#2D2D2D;
+  --font-title:'Cormorant Garamond',Georgia,serif;
+  --font-body:'Montserrat',sans-serif;
+  --ease:cubic-bezier(.25,.46,.45,.94);
+  --transition:all .4s var(--ease);
+  --gold-glow:0 0 40px rgba(201,168,76,.18);
+}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:var(--font-body);background:var(--primary);color:var(--smoke);overflow-x:hidden;line-height:1.6}
+img{max-width:100%;display:block}
+a{text-decoration:none}
+button{font-family:var(--font-body)}
+
+/* SCROLL PROGRESS */
+#scroll-progress{position:fixed;top:0;left:0;width:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));z-index:10000;transition:width .1s linear}
+
+/* NAVBAR */
+#navbar{position:fixed;top:3px;left:0;width:100%;z-index:1000;padding:1.4rem 4%;display:flex;align-items:center;justify-content:space-between;transition:var(--transition)}
+#navbar.scrolled{background:rgba(26,26,46,.97);padding:.9rem 4%;backdrop-filter:blur(20px);border-bottom:1px solid rgba(201,168,76,.2);box-shadow:0 4px 30px rgba(0,0,0,.4)}
+.nav-logo{font-family:var(--font-title);font-size:1.7rem;font-weight:600;color:var(--smoke);letter-spacing:.04em}
+.nav-logo span{color:var(--gold)}
+.nav-menu{display:flex;list-style:none;gap:2rem;align-items:center}
+.nav-menu a{font-size:.72rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,245,245,.82);position:relative;transition:color .3s}
+.nav-menu a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold);transition:width .3s}
+.nav-menu a:hover{color:var(--gold)}
+.nav-menu a:hover::after{width:100%}
+.nav-cta{border:1px solid var(--gold)!important;color:var(--gold)!important;padding:.42rem 1.1rem}
+.nav-cta:hover{background:var(--gold)!important;color:var(--primary)!important}
+.nav-cta::after{display:none!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:5px;z-index:1001;position:relative}
+.hamburger span{display:block;width:25px;height:2px;background:var(--smoke);transition:var(--transition)}
+.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-overlay{position:fixed;inset:0;background:rgba(10,10,25,.98);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;transform:translateX(100%);transition:transform .45s var(--ease)}
+.nav-overlay.open{transform:translateX(0)}
+.nav-overlay a{font-family:var(--font-title);font-size:2rem;font-weight:600;color:var(--smoke);letter-spacing:.04em;transition:color .3s}
+.nav-overlay a:hover{color:var(--gold)}
+
+/* HERO */
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+#hero-videos{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.hvid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s ease;pointer-events:none}
+.hvid.active{opacity:1}
+.hero-mobile-bg{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-bg{position:absolute;inset:0;background:rgba(6,6,18,.72);z-index:1}
+.hero-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 60%,rgba(201,168,76,.1) 0%,transparent 60%)}
+#hero-canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.22;z-index:2;pointer-events:none}
+.hero-content{position:relative;z-index:2;text-align:center;padding:2rem;max-width:920px}
+.hero-eyebrow{font-size:.72rem;font-weight:500;letter-spacing:.45em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;opacity:0;animation:fadeUp .8s ease .3s forwards}
+.hero-title{font-family:var(--font-title);font-size:clamp(3.2rem,8.5vw,7.5rem);font-weight:600;line-height:1.05;color:var(--smoke);margin-bottom:.8rem;opacity:0;animation:fadeUp .8s ease .5s forwards}
+.hero-title .gold{color:var(--gold);font-style:italic}
+.hero-line{width:80px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1.5rem auto;opacity:0;animation:fadeUp .8s ease .7s forwards}
+.hero-sub{font-size:clamp(.9rem,1.8vw,1.1rem);font-weight:300;letter-spacing:.04em;color:rgba(245,245,245,.72);max-width:580px;margin:0 auto 2.8rem;line-height:1.85;opacity:0;animation:fadeUp .8s ease .9s forwards}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeUp .8s ease 1.1s forwards}
+.btn-primary{display:inline-block;background:var(--gold);color:var(--primary);padding:.9rem 2.5rem;font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;border:none;cursor:pointer;position:relative;overflow:hidden;transition:var(--transition)}
+.btn-primary::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transition:left .5s}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 10px 30px rgba(201,168,76,.4)}
+.btn-primary:hover::before{left:100%}
+.btn-outline{display:inline-block;background:transparent;color:var(--smoke);padding:.9rem 2.5rem;font-size:.78rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;border:1px solid rgba(245,245,245,.35);transition:var(--transition)}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.6rem;opacity:0;animation:fadeIn 1s ease 2s forwards}
+.hero-scroll span{font-size:.62rem;letter-spacing:.35em;text-transform:uppercase;color:rgba(245,245,245,.35)}
+.scroll-mouse{width:24px;height:38px;border:1px solid rgba(201,168,76,.45);border-radius:12px;position:relative}
+.scroll-mouse::after{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:4px;height:8px;background:var(--gold);border-radius:2px;animation:scrollDot 2s ease infinite}
+
+/* SECTIONS */
+section{padding:7rem 4%}
+.section-tag{display:block;font-size:.68rem;font-weight:600;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.section-title{font-family:var(--font-title);font-size:clamp(2.2rem,4.5vw,3.5rem);font-weight:600;line-height:1.15;color:var(--smoke);margin-bottom:1.3rem}
+.section-div{width:58px;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-light));margin-bottom:2rem}
+.section-div.center{margin-left:auto;margin-right:auto}
+.section-text{font-size:.93rem;font-weight:300;line-height:1.9;color:rgba(245,245,245,.68);max-width:610px}
+.reveal,.reveal-l,.reveal-r{opacity:0;transition:opacity .75s ease,transform .75s ease}
+.reveal{transform:translateY(40px)}.reveal-l{transform:translateX(-40px)}.reveal-r{transform:translateX(40px)}
+.reveal.on,.reveal-l.on,.reveal-r.on{opacity:1;transform:none}
+
+/* NOSOTROS */
+#nosotros{background:var(--primary);position:relative;overflow:hidden}
+#nosotros::before{content:'';position:absolute;top:0;right:0;width:40%;height:100%;background:radial-gradient(ellipse at right,rgba(201,168,76,.05) 0%,transparent 65%);pointer-events:none}
+.nosotros-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;max-width:1200px;margin:0 auto}
+.nosotros-frame{position:relative;width:100%;aspect-ratio:4/5;background:linear-gradient(135deg,var(--carbon),#1a1a2e);border:1px solid rgba(201,168,76,.18);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.nosotros-frame::before{content:'';position:absolute;inset:-1px;border:1px solid rgba(201,168,76,.12);transform:translate(14px,14px);pointer-events:none}
+.frame-inner{text-align:center;padding:1.5rem;width:100%}
+.frame-pillars{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.15)}
+.frame-pillar{background:linear-gradient(135deg,var(--carbon),#1c1c32);padding:2rem 1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;text-align:center;transition:background .3s}
+.frame-pillar:hover{background:rgba(201,168,76,.06)}
+.fp-icon{font-size:2.2rem;line-height:1}
+.fp-label{font-family:var(--font-title);font-size:.95rem;color:var(--gold);letter-spacing:.06em;font-style:italic}
+.fp-sub{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,245,245,.45)}
+.frame-brand{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-title);font-size:1.1rem;font-weight:700;color:var(--primary);z-index:2;box-shadow:0 0 0 6px rgba(201,168,76,.12),0 0 24px rgba(201,168,76,.2)}
+.stat-badge{position:absolute;top:-18px;right:-18px;background:var(--gold);color:var(--primary);padding:1.1rem 1.4rem;text-align:center}
+.stat-badge .sn{font-family:var(--font-title);font-size:2.2rem;font-weight:700;display:block;line-height:1}
+.stat-badge .sl{font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.values-list{list-style:none;margin-top:2rem;display:flex;flex-direction:column;gap:1rem}
+.values-list li{display:flex;align-items:center;gap:1rem;font-size:.88rem;color:rgba(245,245,245,.78)}
+.values-list li::before{content:'';width:28px;height:1px;background:var(--gold);flex-shrink:0}
+
+/* EMPRESAS */
+#empresas{background:var(--carbon);position:relative;overflow:hidden}
+.empresas-header{text-align:center;margin-bottom:4rem}
+.empresas-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.2rem;max-width:1400px;margin:0 auto}
+.empresa-card{background:rgba(26,26,46,.6);border:1px solid rgba(201,168,76,.14);padding:2.5rem 1.5rem;text-align:center;transition:var(--transition);position:relative;overflow:hidden}
+.empresa-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:transform .4s}
+.empresa-card:hover{border-color:rgba(201,168,76,.38);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.3),var(--gold-glow)}
+.empresa-card:hover::after{transform:scaleX(1)}
+.empresa-logo{width:160px;height:140px;margin:0 auto 1.8rem;background:#ffffff;border:none;border-radius:14px;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:var(--transition);padding:16px;box-shadow:0 4px 24px rgba(0,0,0,.35)}
+.empresa-logo img{width:100%;height:100%;object-fit:contain;display:block}
+.empresa-card:hover .empresa-logo{box-shadow:0 0 0 3px var(--gold),0 8px 32px rgba(201,168,76,.3);transform:scale(1.04)}
+.empresa-name{font-family:var(--font-title);font-size:1.1rem;font-weight:600;color:var(--smoke);margin-bottom:.45rem;line-height:1.3}
+.empresa-type{font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);opacity:.7}
+
+/* ===================== MAQUINARIA ===================== */
+#maquinaria{background:var(--primary);position:relative}
+.maq-header{text-align:center;margin-bottom:4rem}
+.machines-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1300px;margin:0 auto}
+.machine-card{background:var(--carbon);border:1px solid rgba(201,168,76,.12);overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s,border-color .4s;display:flex;flex-direction:column}
+.machine-card:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(0,0,0,.4),0 0 40px rgba(201,168,76,.1);border-color:rgba(201,168,76,.35)}
+.mc-img{position:relative;aspect-ratio:16/10;overflow:hidden;background:#111128;flex-shrink:0}
+.mc-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.machine-card:hover .mc-img img{transform:scale(1.06)}
+.machine-card[data-id="hw2209a"] .mc-img img{object-position:center 70%}
+.mc-type{position:absolute;bottom:0;left:0;background:rgba(12,12,28,.92);border-right:1px solid rgba(201,168,76,.3);border-top:1px solid rgba(201,168,76,.3);color:var(--gold);font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:.32rem .85rem}
+.mc-badge{position:absolute;top:.85rem;right:.85rem;font-size:.58rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.28rem .65rem}
+.mc-badge.disp{background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.4);color:var(--gold)}
+.mc-badge.new-unit{background:#2d6e2d;color:#fff}
+.mc-badge.used{background:rgba(100,80,20,.7);border:1px solid rgba(201,168,76,.3);color:var(--gold-light)}
+.mc-body{padding:1.4rem;display:flex;flex-direction:column;flex:1}
+.mc-model{font-family:var(--font-title);font-size:1.9rem;font-weight:600;color:var(--smoke);line-height:1;margin-bottom:1rem}
+.mc-specs{display:grid;grid-template-columns:1fr 1fr;gap:.45rem .75rem;margin-bottom:1.2rem;padding-bottom:1.2rem;border-bottom:1px solid rgba(201,168,76,.1)}
+.kspec{display:flex;flex-direction:column;gap:.08rem}
+.ks-label{font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,245,245,.38)}
+.ks-val{font-size:.82rem;font-weight:500;color:var(--smoke)}
+.mc-actions{display:flex;gap:.65rem;margin-top:auto}
+.mc-btn-cot{flex:1;text-align:center;padding:.68rem .4rem;font-size:.7rem;letter-spacing:.16em}
+.mc-btn-ficha{display:inline-flex;align-items:center;justify-content:center;padding:.68rem .9rem;font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(201,168,76,.3);color:var(--gold);background:transparent;cursor:pointer;transition:var(--transition);white-space:nowrap}
+.mc-btn-ficha:hover{background:rgba(201,168,76,.1);border-color:var(--gold)}
+
+/* ===================== MODAL ===================== */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:5000;display:flex;align-items:flex-start;justify-content:center;overflow-y:auto;padding:2rem 1rem;opacity:0;pointer-events:none;transition:opacity .3s}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal-box{background:#151525;border:1px solid rgba(201,168,76,.22);max-width:980px;width:100%;position:relative;transform:translateY(30px);transition:transform .4s var(--ease);margin:auto}
+.modal-overlay.open .modal-box{transform:none}
+.modal-close{position:absolute;top:1rem;right:1rem;width:36px;height:36px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.3);color:var(--gold);font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:var(--transition);z-index:2;line-height:1}
+.modal-close:hover{background:var(--gold);color:var(--primary)}
+.modal-top{display:grid;grid-template-columns:1fr 1fr}
+.modal-gallery{background:#0d0d1e;position:relative}
+.modal-main-img{aspect-ratio:4/3;overflow:hidden}
+.modal-main-img img{width:100%;height:100%;object-fit:cover}
+.modal-thumbs{display:flex;gap:3px;padding:3px;background:rgba(0,0,0,.4)}
+.mthumb{width:72px;height:50px;object-fit:cover;cursor:pointer;border:2px solid transparent;transition:border-color .2s;flex-shrink:0;opacity:.65;transition:opacity .2s,border-color .2s}
+.mthumb:hover,.mthumb.active{border-color:var(--gold);opacity:1}
+.modal-info{padding:2rem 2rem 1.5rem;display:flex;flex-direction:column}
+.m-type-tag{font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;display:block}
+.m-model-name{font-family:var(--font-title);font-size:2.6rem;font-weight:600;color:var(--smoke);line-height:1;margin-bottom:1rem}
+.m-desc{font-size:.86rem;line-height:1.82;color:rgba(245,245,245,.62);margin-bottom:1.4rem;flex:1}
+.m-key{display:grid;grid-template-columns:1fr 1fr;gap:.4rem .75rem;margin-bottom:1.5rem;padding:1rem;background:rgba(0,0,0,.25);border:1px solid rgba(201,168,76,.1)}
+.m-key .kspec .ks-label{color:rgba(245,245,245,.35)}
+.modal-ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+.modal-ctas .btn-primary{font-size:.73rem;padding:.75rem 1.4rem}
+.modal-ctas .btn-outline{font-size:.73rem;padding:.75rem 1.4rem}
+.modal-specs-wrap{padding:1.75rem 2rem;border-top:1px solid rgba(201,168,76,.14);background:rgba(0,0,0,.25)}
+.modal-specs-wrap h3{font-family:var(--font-title);font-size:1.25rem;font-weight:600;color:var(--smoke);margin-bottom:1.1rem}
+.specs-tbl{width:100%;border-collapse:collapse;font-size:.83rem}
+.specs-tbl tr:nth-child(even){background:rgba(201,168,76,.04)}
+.specs-tbl td{padding:.6rem 1rem;border-bottom:1px solid rgba(245,245,245,.04);color:rgba(245,245,245,.72)}
+.specs-tbl td:first-child{color:rgba(201,168,76,.88);font-weight:600;font-size:.76rem;letter-spacing:.05em;width:42%}
+
+/* ===================== LUMINARIAS ===================== */
+#luminarias{background:var(--carbon);position:relative;overflow:hidden}
+#luminarias::before,#luminarias::after{content:'';position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+#luminarias::before{top:0}#luminarias::after{bottom:0}
+.lum-header{text-align:center;margin-bottom:4rem}
+.lum-showcase{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1200px;margin:0 auto 4.5rem}
+.lum-img-wrap{position:relative;border:1px solid rgba(201,168,76,.18);aspect-ratio:4/3;background:var(--primary);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.lum-img-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;opacity:0;transition:opacity 1.2s ease}
+.lum-img-wrap img.active{opacity:1}
+.lum-duo-grid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+.lum-duo-cell{background:#07070f;border:1px solid rgba(201,168,76,.55);height:520px;overflow:hidden;position:relative}
+.lum-duo-cell img{width:100%;height:100%;object-fit:cover;display:block}
+.lum-img-overlay{position:absolute;bottom:0;left:0;right:0;padding:1rem 1.5rem;background:linear-gradient(transparent,rgba(10,10,25,.9));display:flex;gap:.5rem;flex-wrap:wrap}
+.lum-cert-tag{font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.4);color:var(--gold);padding:.25rem .6rem}
+.lum-models-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1200px;margin:0 auto 3.5rem}
+.lum-model-card{background:rgba(26,26,46,.5);border:1px solid rgba(201,168,76,.14);padding:1.6rem 1.2rem;text-align:center;transition:var(--transition);position:relative;overflow:hidden}
+.lum-model-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:transform .4s}
+.lum-model-card:hover{border-color:rgba(201,168,76,.38);transform:translateY(-5px);box-shadow:var(--gold-glow)}
+.lum-model-card:hover::after{transform:scaleX(1)}
+.lum-watt{font-family:var(--font-title);font-size:2.8rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:.2rem}
+.lum-w-label{font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,245,245,.38);margin-bottom:.85rem}
+.lum-lm{font-size:1rem;font-weight:600;color:var(--smoke);margin-bottom:.2rem}
+.lum-lm-sub{font-size:.72rem;color:rgba(245,245,245,.45);margin-bottom:.9rem}
+.lum-uso{font-size:.72rem;font-weight:500;color:var(--gold-light);opacity:.8}
+.lum-div{width:30px;height:1px;background:var(--gold);margin:.85rem auto}
+.lum-mini-specs{list-style:none;text-align:left;font-size:.73rem;color:rgba(245,245,245,.52);line-height:1.8}
+.lum-mini-specs li::before{content:'◆ ';color:var(--gold);font-size:.5rem;vertical-align:middle}
+.lum-cta-wrap{display:flex;justify-content:center;margin-top:2.5rem}
+.lum-common-box{max-width:1000px;margin:0 auto;background:rgba(26,26,46,.4);border:1px solid rgba(201,168,76,.14);padding:2rem 2.5rem}
+.lum-common-box h3{font-family:var(--font-title);font-size:1.3rem;font-weight:600;color:var(--smoke);margin-bottom:1.25rem}
+.lum-specs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem 1.5rem}
+.lum-spec-row{display:flex;flex-direction:column;padding:.5rem 0;border-bottom:1px solid rgba(245,245,245,.05)}
+.lum-spec-row .lsr-lbl{font-size:.62rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(201,168,76,.8);margin-bottom:.15rem}
+.lum-spec-row .lsr-val{font-size:.84rem;color:rgba(245,245,245,.75)}
+
+/* ===================== MEDIDORES ===================== */
+#medidores{background:var(--primary);position:relative}
+.med-header{text-align:center;margin-bottom:4rem}
+.medidores-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:1100px;margin:0 auto}
+.medidor-card{background:var(--carbon);border:1px solid rgba(201,168,76,.14);overflow:hidden;transition:var(--transition)}
+.medidor-card:hover{border-color:rgba(201,168,76,.32);box-shadow:var(--gold-glow)}
+.med-img-wrap{position:relative;aspect-ratio:16/10;overflow:hidden;background:#111128}
+.med-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.medidor-card:hover .med-img-wrap img{transform:scale(1.04)}
+.med-type-badge{position:absolute;bottom:0;left:0;background:rgba(12,12,28,.92);border-right:1px solid rgba(201,168,76,.3);border-top:1px solid rgba(201,168,76,.3);color:var(--gold);font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:.32rem .85rem}
+.med-smart-badge{position:absolute;top:.85rem;right:.85rem;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.4);color:var(--gold);font-size:.58rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:.28rem .65rem}
+.med-body{padding:2rem}
+.med-body h3{font-family:var(--font-title);font-size:2rem;font-weight:600;color:var(--smoke);margin-bottom:.4rem}
+.med-sub{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:block}
+.med-desc{font-size:.88rem;color:rgba(245,245,245,.62);line-height:1.82;margin-bottom:1.5rem}
+.med-specs-tbl{width:100%;border-collapse:collapse;font-size:.8rem;margin-bottom:1.5rem}
+.med-specs-tbl th{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);padding:.5rem .75rem;border-bottom:1px solid rgba(201,168,76,.2);text-align:left}
+.med-specs-tbl td{padding:.5rem .75rem;border-bottom:1px solid rgba(245,245,245,.05);color:rgba(245,245,245,.7)}
+.med-specs-tbl tr:nth-child(even){background:rgba(201,168,76,.04)}
+.med-tag-row{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.med-tag{font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.28rem .7rem;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);color:var(--gold)}
+
+/* CERTIFICACIONES */
+#certificaciones{background:var(--carbon);position:relative;overflow:hidden}
+#certificaciones::before,#certificaciones::after{content:'';position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+#certificaciones::before{top:0}#certificaciones::after{bottom:0}
+.cert-header{text-align:center;margin-bottom:4rem}
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1100px;margin:0 auto 3rem}
+.cert-card{background:rgba(26,26,46,.42);border:1px solid rgba(201,168,76,.14);padding:2.5rem 2rem;text-align:center;transition:var(--transition)}
+.cert-card:hover{border-color:rgba(201,168,76,.38);transform:translateY(-5px);box-shadow:var(--gold-glow)}
+.cert-icon{width:60px;height:60px;margin:0 auto 1.4rem;color:var(--gold)}
+.cert-card h3{font-family:var(--font-title);font-size:1.3rem;font-weight:600;color:var(--smoke);margin-bottom:.7rem}
+.cert-card p{font-size:.84rem;color:rgba(245,245,245,.58);line-height:1.75}
+.cert-badge{display:inline-block;margin-top:1rem;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.28);color:var(--gold);font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:.3rem .8rem}
+.cert-stmt{max-width:700px;margin:0 auto;padding:2.5rem;border:1px solid rgba(201,168,76,.2);background:rgba(201,168,76,.03);text-align:center}
+.cert-stmt blockquote{font-family:var(--font-title);font-size:1.25rem;font-style:italic;color:rgba(245,245,245,.78);line-height:1.65}
+.cert-stmt cite{display:block;margin-top:1rem;font-family:var(--font-body);font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-style:normal}
+
+/* CONTACTO */
+#contacto{background:var(--primary);position:relative;overflow:hidden}
+.contacto-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:5rem;max-width:1100px;margin:0 auto;align-items:start}
+.contacto-info h2{font-family:var(--font-title);font-size:clamp(2rem,4vw,3rem);font-weight:600;color:var(--smoke);margin-bottom:1.4rem;line-height:1.2}
+.contacto-info h2 em{color:var(--gold);font-style:italic}
+.contacto-items{display:flex;flex-direction:column;gap:1.8rem;margin-top:2.5rem}
+.citem{display:flex;align-items:flex-start;gap:1.2rem}
+.citem-icon{width:44px;height:44px;flex-shrink:0;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.22);display:flex;align-items:center;justify-content:center;color:var(--gold)}
+.citem-icon svg{width:20px;height:20px}
+.citem-lbl{font-size:.64rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.25rem}
+.citem-val{font-size:.9rem;color:rgba(245,245,245,.78);line-height:1.55}
+.citem-val a{color:rgba(245,245,245,.78);transition:color .3s}
+.citem-val a:hover{color:var(--gold)}
+.cform{background:rgba(45,45,45,.28);border:1px solid rgba(201,168,76,.14);padding:3rem}
+.cform-title{font-family:var(--font-title);font-size:1.5rem;font-weight:600;color:var(--smoke);margin-bottom:2rem}
+.fgroup{margin-bottom:1.4rem}
+.flabel{display:block;font-size:.68rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,245,245,.55);margin-bottom:.5rem}
+.finput,.ftextarea,.fselect{width:100%;background:rgba(26,26,46,.6);border:1px solid rgba(201,168,76,.14);color:var(--smoke);padding:.88rem 1rem;font-family:var(--font-body);font-size:.9rem;transition:border-color .3s;outline:none;-webkit-appearance:none;appearance:none}
+.finput:focus,.ftextarea:focus,.fselect:focus{border-color:var(--gold)}
+.finput::placeholder,.ftextarea::placeholder{color:rgba(245,245,245,.22)}
+.ftextarea{min-height:120px;resize:vertical}
+.fselect option{background:var(--carbon)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.ferr{font-size:.72rem;color:#e05252;margin-top:.3rem;display:none}
+.fgroup.err .finput,.fgroup.err .ftextarea,.fgroup.err .fselect{border-color:#e05252}
+.fgroup.err .ferr{display:block}
+#form-ok{display:none;text-align:center;padding:2rem}
+.ok-icon{width:58px;height:58px;background:rgba(201,168,76,.1);border:1px solid var(--gold);border-radius:50%;margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;color:var(--gold)}
+#form-ok h3{font-family:var(--font-title);font-size:1.5rem;color:var(--smoke);margin-bottom:.5rem}
+#form-ok p{font-size:.88rem;color:rgba(245,245,245,.55)}
+
+/* FOOTER */
+footer{background:#0c0c1d;padding:4rem 4% 2rem;border-top:1px solid rgba(201,168,76,.14)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;max-width:1300px;margin:0 auto 3rem}
+.f-brand-logo{font-family:var(--font-title);font-size:1.9rem;font-weight:600;color:var(--smoke);display:block;margin-bottom:1rem}
+.f-brand-logo span{color:var(--gold)}
+.f-brand p{font-size:.84rem;color:rgba(245,245,245,.4);line-height:1.85;max-width:260px}
+.f-col h4{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.f-col ul{list-style:none;display:flex;flex-direction:column;gap:.75rem}
+.f-col ul li a{font-size:.84rem;color:rgba(245,245,245,.4);transition:color .3s}
+.f-col ul li a:hover{color:var(--gold)}
+.footer-btm{max-width:1300px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(245,245,245,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-btm p{font-size:.78rem;color:rgba(245,245,245,.28)}
+.f-legal{display:flex;gap:1.5rem}
+.f-legal a{font-size:.78rem;color:rgba(245,245,245,.28);transition:color .3s}
+.f-legal a:hover{color:var(--gold)}
+
+/* WHATSAPP */
+#wa-float{position:fixed;bottom:2rem;right:2rem;z-index:900;display:flex;flex-direction:column;align-items:flex-end;gap:.7rem}
+.wa-tip{background:var(--carbon);color:var(--smoke);font-size:.78rem;font-weight:500;padding:.5rem 1rem;border-radius:4px;white-space:nowrap;box-shadow:0 4px 15px rgba(0,0,0,.3);opacity:0;transform:translateX(10px);transition:var(--transition);pointer-events:none}
+#wa-float:hover .wa-tip{opacity:1;transform:translateX(0)}
+.wa-btn{width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:var(--transition);position:relative}
+.wa-btn::before{content:'';position:absolute;inset:0;border-radius:50%;background:#25D366;animation:waPulse 2s ease infinite;z-index:-1}
+.wa-btn:hover{transform:scale(1.1);box-shadow:0 8px 30px rgba(37,211,102,.6)}
+.wa-btn svg{width:28px;height:28px;fill:#fff}
+#btt{position:fixed;bottom:2rem;left:2rem;width:44px;height:44px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.28);color:var(--gold);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:var(--transition);z-index:900;opacity:0;pointer-events:none}
+#btt.on{opacity:1;pointer-events:all}
+#btt:hover{background:var(--gold);color:var(--primary)}
+
+/* KEYFRAMES */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{to{opacity:1}}
+@keyframes scrollDot{0%{transform:translateX(-50%) translateY(0);opacity:1}100%{transform:translateX(-50%) translateY(16px);opacity:0}}
+@keyframes waPulse{0%{transform:scale(1);opacity:.8}70%{transform:scale(1.45);opacity:0}100%{transform:scale(1.45);opacity:0}}
+
+/* RESPONSIVE */
+@media(max-width:1200px){
+  .machines-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:1024px){
+  .empresas-grid{grid-template-columns:repeat(3,1fr)}
+  .cert-grid{grid-template-columns:repeat(2,1fr)}
+  .lum-models-grid{grid-template-columns:repeat(2,1fr)}
+  .lum-specs-grid{grid-template-columns:repeat(2,1fr)}
+  .modal-top{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  section{padding:5rem 5%}
+  .nav-menu{display:none}
+  .hamburger{display:flex}
+  .nosotros-grid{grid-template-columns:1fr}
+  .nosotros-visual-wrap{display:none}
+  .machines-grid{grid-template-columns:1fr}
+  .lum-showcase{grid-template-columns:1fr}
+  .lum-models-grid{grid-template-columns:repeat(2,1fr)}
+  .medidores-grid{grid-template-columns:1fr}
+  .contacto-grid{grid-template-columns:1fr;gap:3rem}
+  .cform{padding:2rem}
+  .frow{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:2rem}
+  .footer-btm{flex-direction:column;text-align:center}
+  .cert-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .empresas-grid{grid-template-columns:repeat(2,1fr)}
+  .lum-models-grid{grid-template-columns:1fr}
+}
+
+/* ===================== CATÁLOGO DE EQUIPOS ===================== */
+.cat-section{margin-top:5rem;padding-top:4.5rem;border-top:1px solid rgba(201,168,76,.12)}
+.cat-header{text-align:center;margin-bottom:3.5rem}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1260px;margin:0 auto}
+.cat-card{background:var(--carbon);border:1px solid rgba(201,168,76,.12);overflow:hidden;display:flex;flex-direction:column;position:relative;transition:border-color .4s,box-shadow .4s,transform .4s}
+.cat-card:hover{border-color:rgba(201,168,76,.55);box-shadow:0 0 50px rgba(201,168,76,.13),0 24px 55px rgba(0,0,0,.45);transform:translateY(-6px)}
+.cat-img{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0d0d1e}
+.cat-img img{width:100%;height:100%;object-fit:cover;transition:transform .65s var(--ease);display:block}
+.cat-card:hover .cat-img img{transform:scale(1.08)}
+.cat-img-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .9s ease,transform .65s var(--ease)}
+.cat-img-slide.active{opacity:1}
+.cat-badge{position:absolute;top:.85rem;right:.85rem;font-size:.58rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .72rem}
+.cat-badge.nuevo{background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.4);color:var(--gold)}
+.cat-badge.usado{background:rgba(100,80,20,.7);border:1px solid rgba(201,168,76,.3);color:var(--gold-light)}
+.cat-body{padding:1.6rem 1.4rem;display:flex;flex-direction:column;flex:1;gap:.9rem}
+.cat-name{font-family:var(--font-title);font-size:1.85rem;font-weight:600;color:var(--smoke);line-height:1.1}
+.cat-desc{font-size:.8rem;color:rgba(245,245,245,.5);line-height:1.7}
+.cat-type-row{display:flex;gap:.6rem;flex-wrap:wrap}
+.cat-btn-venta,.cat-btn-renta{flex:1;text-align:center;padding:.68rem .5rem;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;transition:var(--transition);display:block;border:none;cursor:pointer}
+.cat-btn-venta{background:var(--gold);color:var(--primary)}
+.cat-btn-venta:hover{background:var(--gold-light);transform:translateY(-1px)}
+.cat-btn-renta{background:transparent;color:var(--gold);border:1px solid rgba(201,168,76,.5)}
+.cat-btn-renta:hover{background:rgba(201,168,76,.1);border-color:var(--gold)}
+.cat-wa-btn{display:flex;align-items:center;justify-content:center;gap:.55rem;width:100%;padding:.72rem;font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;background:rgba(37,211,102,.07);border:1px solid rgba(37,211,102,.28);color:#2dcc70;transition:var(--transition);margin-top:auto}
+.cat-wa-btn:hover{background:rgba(37,211,102,.16);border-color:#25D366}
+.cat-wa-btn svg{width:15px;height:15px;fill:#2dcc70;flex-shrink:0}
+
+/* ===================== FLETES TERRESTRES ===================== */
+.fletes-wrap{margin-top:5rem;padding-top:4.5rem;border-top:1px solid rgba(201,168,76,.12)}
+.fletes-card{max-width:1200px;margin:0 auto;background:var(--carbon);border:1px solid rgba(201,168,76,.18);display:grid;grid-template-columns:1.2fr 1fr;overflow:hidden}
+.fletes-img{position:relative;overflow:hidden}
+.fletes-img img{width:100%;height:100%;object-fit:cover;display:block;min-height:380px;transition:transform .7s var(--ease)}
+.fletes-card:hover .fletes-img img{transform:scale(1.05)}
+.fletes-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,var(--carbon) 100%)}
+.fletes-body{padding:3.5rem 2.8rem;display:flex;flex-direction:column;justify-content:center;gap:1.3rem}
+.fletes-tag{display:flex;align-items:center;gap:.75rem}
+.fletes-tag svg{width:32px;height:32px;color:var(--gold);flex-shrink:0}
+.fletes-tag span{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.fletes-body h3{font-family:var(--font-title);font-size:2.4rem;font-weight:600;color:var(--smoke);line-height:1.15}
+.fletes-body p{font-size:.9rem;color:rgba(245,245,245,.62);line-height:1.88}
+@media(max-width:1024px){
+  .fletes-card{grid-template-columns:1fr}
+  .fletes-img img{min-height:260px}
+  .fletes-img-overlay{background:linear-gradient(to bottom,transparent 60%,var(--carbon) 100%)}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .cat-grid{grid-template-columns:1fr}
+}
+
+/* HERO VIDEO mobile */
+@media(max-width:768px){
+  #hero-videos{display:none}
+  .hero-mobile-bg{display:block}
+}
+
+/* NOSOTROS CAROUSEL */
+.nc-wrap{position:relative;width:100%;aspect-ratio:4/5;overflow:hidden;border:1px solid rgba(201,168,76,.2);background:#0d0d1e}
+.nc-slide{position:absolute;inset:0;opacity:0;transition:opacity .9s ease}
+.nc-slide.active{opacity:1;z-index:1}
+.nc-slide img{width:100%;height:100%;object-fit:cover;display:block}
+.nc-caption{position:absolute;bottom:0;left:0;right:0;padding:1.2rem 1.5rem;background:linear-gradient(transparent,rgba(6,6,18,.95));font-family:var(--font-title);font-size:1.05rem;font-style:italic;color:var(--gold);letter-spacing:.04em;z-index:2}
+.nc-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(6,6,18,.72);border:1px solid rgba(201,168,76,.32);color:var(--gold);width:42px;height:42px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .3s;z-index:3;font-size:1.1rem}
+.nc-arrow:hover{background:rgba(201,168,76,.18)}
+.nc-prev{left:.8rem}.nc-next{right:.8rem}
+.nc-dots{position:absolute;bottom:3.5rem;left:50%;transform:translateX(-50%);display:flex;gap:.55rem;z-index:3}
+.nc-dot{width:7px;height:7px;border-radius:50%;background:rgba(245,245,245,.28);border:none;cursor:pointer;padding:0;transition:background .3s}
+.nc-dot.on{background:var(--gold);transform:scale(1.25)}
+.nc-badge-stat{position:absolute;bottom:.5rem;right:.5rem;background:var(--gold);color:var(--primary);padding:.9rem 1.2rem;text-align:center;z-index:3}
+.nc-badge-stat .sn{font-family:var(--font-title);font-size:2rem;font-weight:700;display:block;line-height:1}
+.nc-badge-stat .sl{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+
+/* ¿QUÉ HACEMOS? */
+#que-hacemos{background:var(--carbon);position:relative;overflow:hidden}
+#que-hacemos::before,#que-hacemos::after{content:'';position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+#que-hacemos::before{top:0}#que-hacemos::after{bottom:0}
+.qh-inner{text-align:center;max-width:900px;margin:0 auto}
+.qh-subtitle{font-family:var(--font-title);font-size:1.35rem;font-style:italic;color:var(--gold);margin-bottom:1.5rem;letter-spacing:.04em}
+.qh-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1100px;margin:3.5rem auto 0}
+.qh-card{background:rgba(26,26,46,.5);border:1px solid rgba(201,168,76,.14);padding:3rem 2rem;text-align:center;transition:var(--transition);position:relative;overflow:hidden}
+.qh-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:transform .4s}
+.qh-card:hover{border-color:rgba(201,168,76,.38);transform:translateY(-6px);box-shadow:var(--gold-glow)}
+.qh-card:hover::after{transform:scaleX(1)}
+.qh-icon{font-size:2.8rem;margin-bottom:1.2rem;line-height:1}
+.qh-title{font-family:var(--font-title);font-size:1.55rem;font-weight:600;color:var(--smoke);margin-bottom:.85rem}
+.qh-text{font-size:.88rem;color:rgba(245,245,245,.58);line-height:1.78}
+
+/* CONCESIONES */
+#concesiones{position:relative;min-height:640px;display:flex;align-items:center;overflow:hidden;padding:7rem 4%}
+.conc-bg-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease;z-index:0}
+.conc-bg-slide.active{opacity:1}
+.conc-bg-slide img{width:100%;height:100%;object-fit:cover;display:block}
+.conc-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(6,6,18,.93) 0%,rgba(6,6,18,.8) 55%,rgba(6,6,18,.55) 100%);z-index:1}
+.conc-content{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:center;max-width:1200px;margin:0 auto;width:100%}
+.conc-list{list-style:none;margin-top:1.5rem;display:flex;flex-direction:column;gap:1rem}
+.conc-list li{display:flex;align-items:flex-start;gap:1rem;font-size:.9rem;color:rgba(245,245,245,.75);line-height:1.5}
+.conc-list li::before{content:'—';color:var(--gold);flex-shrink:0;font-weight:700}
+.conc-services{display:flex;flex-direction:column;gap:.85rem}
+.conc-svc{background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.18);padding:1.1rem 1.4rem;display:flex;align-items:center;gap:1.2rem;transition:var(--transition);cursor:default}
+.conc-svc:hover{border-color:rgba(201,168,76,.4);background:rgba(201,168,76,.07)}
+.conc-svc-icon{font-size:1.6rem;flex-shrink:0;width:40px;text-align:center}
+.conc-svc-name{font-family:var(--font-title);font-size:1.05rem;font-weight:600;color:var(--gold);display:block;margin-bottom:.1rem}
+.conc-svc-desc{font-size:.78rem;color:rgba(245,245,245,.5)}
+
+/* PROYECTOS DESTACADOS */
+#proyectos{background:var(--primary)}
+.proy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1300px;margin:0 auto}
+.proy-card{position:relative;overflow:hidden;aspect-ratio:3/4;cursor:pointer}
+.proy-card img{width:100%;height:100%;object-fit:cover;transition:transform .75s var(--ease);display:block}
+.proy-card:hover img{transform:scale(1.1)}
+.proy-overlay{position:absolute;inset:0;background:linear-gradient(transparent 30%,rgba(6,6,18,.85) 65%,rgba(6,6,18,.97) 100%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:2rem;transition:background .5s}
+.proy-card:hover .proy-overlay{background:linear-gradient(transparent 20%,rgba(201,168,76,.12) 50%,rgba(6,6,18,.92) 100%)}
+.proy-city{font-family:var(--font-title);font-size:1.55rem;font-weight:600;color:var(--smoke);text-align:center;letter-spacing:.04em;margin-bottom:.6rem;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.proy-label{font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);opacity:.7;margin-bottom:.5rem}
+.proy-action{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,.45);padding:.45rem 1.3rem;opacity:0;transform:translateY(12px);transition:opacity .4s,transform .4s}
+.proy-card:hover .proy-action{opacity:1;transform:none}
+
+/* RESPONSIVE extras */
+@media(max-width:1024px){
+  .conc-content{grid-template-columns:1fr;gap:3rem}
+  .proy-grid{grid-template-columns:repeat(2,1fr)}
+  .qh-cards{grid-template-columns:repeat(2,1fr)}
+  .nosotros-visual-wrap{display:block}
+}
+@media(max-width:768px){
+  .nosotros-visual-wrap{display:block}
+  .nc-wrap{aspect-ratio:4/3}
+  .proy-grid{grid-template-columns:1fr}
+  .qh-cards{grid-template-columns:1fr}
+  .conc-content{grid-template-columns:1fr}
+}
+
+/* ===== FLETES IMAGE CAROUSEL ===== */
+.fletes-img{position:relative;overflow:hidden;min-height:380px}
+.fletes-img-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease,transform .7s var(--ease)}
+.fletes-img-slide.active{opacity:1}
+.fletes-card:hover .fletes-img-slide.active{transform:scale(1.05)}
+@media(max-width:768px){.fletes-img{min-height:260px}}
+
+/* ===== DOLORES VIDEO SEQUENCE ===== */
+.dol-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease}
+.dol-vid.active{opacity:1}
+
+/* ===== ALUMBRADO PROYECTOS ===== */
+#alumbrado-proyectos{background:var(--primary);padding:7rem 0;position:relative}
+#alumbrado-proyectos::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(201,168,76,.04) 0%,transparent 70%);pointer-events:none}
+.alum-inner{max-width:1240px;margin:0 auto;padding:0 2rem}
+.alum-header{text-align:center;margin-bottom:4rem}
+.alum-dolores{margin-bottom:4rem}
+.alum-city-label{font-family:var(--font-body);font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
+.alum-dolores-title{font-family:var(--font-title);font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--smoke);line-height:1.15;margin-bottom:1rem}
+.alum-vid-tabs{display:flex;gap:.75rem;margin-bottom:1.2rem}
+.alum-vid-tab{padding:.48rem 1.4rem;border:1px solid rgba(201,168,76,.38);background:transparent;color:rgba(245,245,245,.6);font-family:var(--font-body);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:var(--transition)}
+.alum-vid-tab.active,.alum-vid-tab:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,.07)}
+.alum-dolores-video-wrap{position:relative;aspect-ratio:16/9;background:#05050f;border:1px solid rgba(201,168,76,.28);overflow:hidden}
+.alum-vid-el{width:100%;height:100%;object-fit:cover;display:block}
+.alum-dolores-video-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 70%,rgba(26,26,46,.55));pointer-events:none}
+
+/* Próximamente grid */
+.alum-prox-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1rem}
+.alum-prox-card{background:#0b0b1c;border:1px solid rgba(201,168,76,.2);padding:2.8rem 1.6rem 2.2rem;text-align:center;position:relative;overflow:hidden;transition:border-color .4s var(--ease),transform .4s var(--ease)}
+.alum-prox-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,var(--gold),transparent);opacity:0;transition:opacity .4s var(--ease)}
+.alum-prox-card:hover{border-color:rgba(201,168,76,.52);transform:translateY(-5px)}
+.alum-prox-card:hover::before{opacity:1}
+.alum-prox-city{font-family:var(--font-body);font-size:.63rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem}
+.alum-prox-label{font-family:var(--font-title);font-size:1.4rem;color:var(--smoke);margin-bottom:1.6rem}
+.alum-prox-msg{font-size:.76rem;color:rgba(245,245,245,.42);font-family:var(--font-body);letter-spacing:.06em;margin-top:.9rem}
+.alum-prox-soon{display:inline-block;margin-top:.75rem;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-light);border:1px solid rgba(232,200,117,.35);padding:.28rem .9rem}
+
+/* Robot SVG */
+.robot-wrap{width:110px;height:130px;margin:0 auto .4rem}
+.robot-wrap svg{width:100%;height:100%}
+
+/* Robot animations */
+@keyframes robotFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes eyeBlink{0%,88%,100%{transform:scaleY(1)}93%{transform:scaleY(.08)}}
+@keyframes armSwingL{0%,100%{transform:rotate(-18deg)}50%{transform:rotate(12deg)}}
+@keyframes armSwingR{0%,100%{transform:rotate(18deg)}50%{transform:rotate(-12deg)}}
+@keyframes gearSpin{to{transform:rotate(360deg)}}
+@keyframes antPulse{0%,100%{opacity:.35;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.25)}}
+@keyframes lgtA{0%,100%{opacity:.25}50%{opacity:.9}}
+@keyframes lgtB{0%,100%{opacity:.55}40%{opacity:.1}80%{opacity:.85}}
+.robot-body-g{animation:robotFloat 2.6s ease-in-out infinite}
+.robot-eye{transform-box:fill-box;transform-origin:50% 50%;animation:eyeBlink 3.2s ease-in-out infinite}
+.robot-arm-l{transform-box:fill-box;transform-origin:90% 5%;animation:armSwingL 1.9s ease-in-out infinite}
+.robot-arm-r{transform-box:fill-box;transform-origin:10% 5%;animation:armSwingR 1.9s ease-in-out infinite .95s}
+.robot-gear{transform-box:fill-box;transform-origin:50% 50%;animation:gearSpin 2.2s linear infinite}
+.robot-ant{transform-box:fill-box;transform-origin:50% 100%;animation:antPulse 1.1s ease-in-out infinite}
+.robot-lgt-a{animation:lgtA 1.3s ease-in-out infinite}
+.robot-lgt-b{animation:lgtB 1.3s ease-in-out infinite .65s}
+
+@media(max-width:900px){.alum-prox-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:580px){.alum-prox-grid{grid-template-columns:1fr}.alum-dolores-video-wrap{aspect-ratio:4/3}}
+
+/* Btn microinteraction */
+.btn-primary{position:relative;overflow:hidden}
+.btn-primary::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,.07);transform:translateX(-100%);transition:transform .4s var(--ease);pointer-events:none}
+.btn-primary:hover::after{transform:translateX(0)}
+
+/* Parallax will-change hint */
+#hero-videos{will-change:transform}
+
+/* Reduced motion */
+@media(prefers-reduced-motion:reduce){
+  .robot-body-g,.robot-eye,.robot-arm-l,.robot-arm-r,.robot-gear,.robot-ant,.robot-lgt-a,.robot-lgt-b{animation:none}
+  .hvid,.reveal,.reveal-l,.reveal-r{transition:none}
+}
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">G-<span>SALO</span></a>
+  <ul class="nav-menu" style="gap:1.4rem">
+    <li><a href="#nosotros" style="font-size:.65rem;letter-spacing:.1em">Nosotros</a></li>
+    <li><a href="#concesiones" style="font-size:.65rem;letter-spacing:.1em">Concesiones</a></li>
+    <li><a href="#proyectos" style="font-size:.65rem;letter-spacing:.1em">Proyectos</a></li>
+    <li><a href="#alumbrado-proyectos" style="font-size:.65rem;letter-spacing:.1em">Alumbrado</a></li>
+    <li><a href="#empresas" style="font-size:.65rem;letter-spacing:.1em">Empresas</a></li>
+    <li><a href="#maquinaria" style="font-size:.65rem;letter-spacing:.1em">Maquinaria</a></li>
+    <li><a href="#luminarias" style="font-size:.65rem;letter-spacing:.1em">Luminarias</a></li>
+    <li><a href="#medidores" style="font-size:.65rem;letter-spacing:.1em">Medidores</a></li>
+    <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-overlay" id="nav-overlay">
+  <a href="#nosotros" class="ovl">Nosotros</a>
+  <a href="#que-hacemos" class="ovl">¿Qué Hacemos?</a>
+  <a href="#concesiones" class="ovl">Concesiones</a>
+  <a href="#proyectos" class="ovl">Proyectos</a>
+  <a href="#alumbrado-proyectos" class="ovl">Alumbrado</a>
+  <a href="#empresas" class="ovl">Empresas</a>
+  <a href="#maquinaria" class="ovl">Maquinaria</a>
+  <a href="#luminarias" class="ovl">Luminarias</a>
+  <a href="#medidores" class="ovl">Medidores</a>
+  <a href="#contacto" class="ovl">Contacto</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div id="hero-videos">
+    <video class="hvid active" autoplay muted playsinline>
+      <source src="VIDEOS%20WEBSITE/video%20bull.mp4" type="video/mp4">
+    </video>
+    <video class="hvid" muted playsinline preload="none">
+      <source src="VIDEOS%20WEBSITE/retroexcavadora%20video.mp4" type="video/mp4">
+    </video>
+    <video class="hvid" muted playsinline preload="none">
+      <source src="VIDEOS%20WEBSITE/excavadora%20video.mp4" type="video/mp4">
+    </video>
+    <video class="hvid" muted playsinline preload="none">
+      <source src="VIDEOS%20WEBSITE/CIUDAD%20DOLORES.mp4" type="video/mp4">
+    </video>
+    <video class="hvid" muted playsinline preload="none">
+      <source src="VIDEOS%20WEBSITE/maquina%20gondola%20.mp4" type="video/mp4">
+    </video>
+    <video class="hvid" muted playsinline preload="none">
+      <source src="VIDEOS%20WEBSITE/alumbrado%20celaya.mp4" type="video/mp4">
+    </video>
+    <video class="hvid" muted playsinline preload="none">
+      <source src="VIDEOS%20WEBSITE/ALUMBRADO%20DOLORES%202.mp4" type="video/mp4">
+    </video>
+  </div>
+  <img class="hero-mobile-bg" src="VIDEOS%20WEBSITE/MAQUINARIA.jpeg" alt="" aria-hidden="true" loading="eager">
+  <div class="hero-bg"></div>
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Grupo Empresarial — Celaya, Guanajuato</p>
+    <h1 class="hero-title">G-<span class="gold">SALO</span></h1>
+    <div class="hero-line"></div>
+    <p class="hero-sub">Excelencia e innovación al servicio de la industria del Bajío. Maquinaria pesada, medidores de agua certificados y luminarias con los más altos estándares normativos de México.</p>
+    <div class="hero-btns">
+      <a href="#maquinaria" class="btn-primary">Ver Maquinaria</a>
+      <a href="#contacto" class="btn-outline">Contáctenos</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-mouse"></div><span>Scroll</span></div>
+</section>
+
+<!-- NOSOTROS -->
+<section id="nosotros">
+  <div class="nosotros-grid">
+    <div class="nosotros-visual-wrap reveal-l">
+      <div class="nc-wrap" id="nc-wrap">
+        <div class="nc-slide active">
+          <img src="VIDEOS%20WEBSITE/FOTO%20DOLORES%20ALUMBRADO.JPG" alt="Alumbrado Público Dolores Hidalgo" loading="lazy">
+          <div class="nc-caption">Alumbrado Público — Dolores Hidalgo, Gto.</div>
+        </div>
+        <div class="nc-slide">
+          <img src="VIDEOS%20WEBSITE/ALUMBRADO%20CTZAR.jpeg" alt="Alumbrado Público Cortazar" loading="lazy">
+          <div class="nc-caption">Alumbrado Público — Cortazar, Guanajuato</div>
+        </div>
+        <div class="nc-slide">
+          <img src="VIDEOS%20WEBSITE/alumbrado%20clya.jpeg" alt="Alumbrado Público Celaya" loading="lazy">
+          <div class="nc-caption">Alumbrado Público — Celaya, Guanajuato</div>
+        </div>
+        <div class="nc-slide">
+          <img src="VIDEOS%20WEBSITE/MAQUINARIA.jpeg" alt="Maquinaria Pesada en Operación" loading="lazy">
+          <div class="nc-caption">Maquinaria Pesada en Operación</div>
+        </div>
+        <div class="nc-slide">
+          <img src="VIDEOS%20WEBSITE/lampara.jpeg" alt="Luminarias LED" loading="lazy">
+          <div class="nc-caption">Luminarias LED — Soluciones de Iluminación</div>
+        </div>
+        <div class="nc-slide">
+          <img src="VIDEOS%20WEBSITE/infra.jpeg" alt="Proyectos de Infraestructura" loading="lazy">
+          <div class="nc-caption">Proyectos de Infraestructura — Bajío</div>
+        </div>
+        <button class="nc-arrow nc-prev" aria-label="Anterior">&#8592;</button>
+        <button class="nc-arrow nc-next" aria-label="Siguiente">&#8594;</button>
+        <div class="nc-dots" id="nc-dots">
+          <button class="nc-dot on" aria-label="Slide 1"></button>
+          <button class="nc-dot" aria-label="Slide 2"></button>
+          <button class="nc-dot" aria-label="Slide 3"></button>
+          <button class="nc-dot" aria-label="Slide 4"></button>
+          <button class="nc-dot" aria-label="Slide 5"></button>
+          <button class="nc-dot" aria-label="Slide 6"></button>
+        </div>
+      </div>
+    </div>
+    <div class="reveal-r">
+      <span class="section-tag">Quiénes Somos</span>
+      <h2 class="section-title">Un grupo consolidado al servicio de México</h2>
+      <div class="section-div"></div>
+      <p class="section-text">G-SALO es un grupo empresarial con presencia sólida en el Bajío mexicano, especializado en la comercialización y distribución de maquinaria pesada, sistemas de medición de agua y soluciones de luminarias. Con sede en Celaya, Guanajuato, y más de dos décadas de trayectoria, hemos construido relaciones de confianza con clientes del sector industrial, gubernamental y de la construcción en toda la región.</p>
+      <p class="section-text" style="margin-top:1rem">Nuestro compromiso es ofrecer productos certificados, respaldados por normas NOM y permisos oficiales, garantizando a nuestros clientes la tranquilidad de trabajar con estándares de calidad internacionales.</p>
+      <ul class="values-list">
+        <li>Productos certificados con normas NOM vigentes</li>
+        <li>Sede en Celaya, Gto. — cobertura nacional</li>
+        <li>Atención personalizada y soporte técnico especializado</li>
+        <li>Alianzas estratégicas con las mejores marcas del sector</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- EMPRESAS -->
+<section id="empresas">
+  <div class="empresas-header reveal">
+    <span class="section-tag">Grupo G-SALO</span>
+    <h2 class="section-title">Nuestras Empresas</h2>
+    <div class="section-div center"></div>
+    <p class="section-text" style="margin:0 auto;text-align:center">Cinco empresas con un propósito común: impulsar el desarrollo industrial y la construcción en México.</p>
+  </div>
+  <div class="empresas-grid">
+    <div class="empresa-card reveal" style="transition-delay:.1s">
+      <div class="empresa-logo"><img src="EMPRESAS LOGOS/Captura de pantalla 2026-05-15 195752.png" alt="Construcciones EOG" loading="lazy"></div>
+      <h3 class="empresa-name">Construcciones EOG</h3><p class="empresa-type">S.A. de C.V.</p>
+    </div>
+    <div class="empresa-card reveal" style="transition-delay:.2s">
+      <div class="empresa-logo"><img src="EMPRESAS LOGOS/GM SALO.jpeg" alt="GM-SALO Corporativo Constructor Bajío" loading="lazy"></div>
+      <h3 class="empresa-name">GM-SALO Corporativo Constructor</h3><p class="empresa-type">Bajío</p>
+    </div>
+    <div class="empresa-card reveal" style="transition-delay:.3s">
+      <div class="empresa-logo"><img src="EMPRESAS LOGOS/Captura de pantalla 2026-05-15 195654.png" alt="Go Walk Constructora" loading="lazy"></div>
+      <h3 class="empresa-name">Go Walk Constructora</h3><p class="empresa-type">Construcción &amp; Desarrollo</p>
+    </div>
+    <div class="empresa-card reveal" style="transition-delay:.4s">
+      <div class="empresa-logo"><img src="EMPRESAS LOGOS/CONSENER LOGO.png" alt="CONSENER" loading="lazy"></div>
+      <h3 class="empresa-name">CONSENER</h3><p class="empresa-type">Energía &amp; Soluciones</p>
+    </div>
+    <div class="empresa-card reveal" style="transition-delay:.5s">
+      <div class="empresa-logo"><img src="EMPRESAS LOGOS/LOGO GON.png" alt="GON-ELEC México" loading="lazy"></div>
+      <h3 class="empresa-name">GON-ELEC México</h3><p class="empresa-type">Maquinaria &amp; Electromecánica</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== QUÉ HACEMOS ======================== -->
+<section id="que-hacemos">
+  <div class="qh-inner reveal">
+    <span class="section-tag">Nuestra Especialidad</span>
+    <h2 class="section-title">¿Qué Hacemos?</h2>
+    <div class="section-div center"></div>
+    <p class="qh-subtitle">Desarrollo de Infraestructura al más alto nivel</p>
+    <p class="section-text" style="margin:0 auto;text-align:center">En G-SALO nos especializamos en concesiones de alumbrado público, obras civiles en calles y todo tipo de proyectos de construcción. Nos enfocamos en brindar productos y servicios de excelencia, garantizando los más altos estándares de calidad en cada proyecto que desarrollamos.</p>
+  </div>
+  <div class="qh-cards">
+    <div class="qh-card reveal" style="transition-delay:.1s">
+      <div class="qh-icon">🏗️</div>
+      <h3 class="qh-title">Infraestructura</h3>
+      <p class="qh-text">Concesiones de alumbrado público y obras civiles de alto impacto en todo el país.</p>
+    </div>
+    <div class="qh-card reveal" style="transition-delay:.2s">
+      <div class="qh-icon">🔧</div>
+      <h3 class="qh-title">Servicios Integrales</h3>
+      <p class="qh-text">Construcción, operación y mantenimiento especializado bajo los más altos estándares.</p>
+    </div>
+    <div class="qh-card reveal" style="transition-delay:.3s">
+      <div class="qh-icon">🏆</div>
+      <h3 class="qh-title">Excelencia</h3>
+      <p class="qh-text">Comprometidos con los más altos estándares de calidad en cada proyecto que desarrollamos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== CONCESIONES ======================== -->
+<section id="concesiones">
+  <video autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none">
+    <source src="VIDEOS%20WEBSITE/ALUMBRADO%20DOLORES%203.mp4" type="video/mp4">
+  </video>
+  <div class="conc-overlay"></div>
+  <div class="conc-content">
+    <div class="reveal-l">
+      <span class="section-tag">Contratos de Alto Impacto</span>
+      <h2 class="section-title">Concesiones</h2>
+      <div class="section-div"></div>
+      <p class="section-text">Desarrollamos proyectos de alto impacto bajo los siguientes esquemas:</p>
+      <ul class="conc-list">
+        <li>Contrato de Prestación de Servicios</li>
+        <li>Obra Pública Financiada</li>
+        <li>Operación y Mantenimiento bajo Estándares de Desempeño</li>
+      </ul>
+    </div>
+    <div class="conc-services reveal-r">
+      <div class="conc-svc">
+        <span class="conc-svc-icon">⚖️</span>
+        <div><span class="conc-svc-name">Ingeniería Integral</span><span class="conc-svc-desc">Estructural, Legal y Financiera</span></div>
+      </div>
+      <div class="conc-svc">
+        <span class="conc-svc-icon">🏗️</span>
+        <div><span class="conc-svc-name">Construcción</span><span class="conc-svc-desc">Ejecución de obras civiles e infraestructura</span></div>
+      </div>
+      <div class="conc-svc">
+        <span class="conc-svc-icon">⚙️</span>
+        <div><span class="conc-svc-name">Operación</span><span class="conc-svc-desc">Gestión y operación de proyectos en concesión</span></div>
+      </div>
+      <div class="conc-svc">
+        <span class="conc-svc-icon">🔧</span>
+        <div><span class="conc-svc-name">Mantenimiento</span><span class="conc-svc-desc">Preventivo y correctivo especializado</span></div>
+      </div>
+      <div class="conc-svc">
+        <span class="conc-svc-icon">📋</span>
+        <div><span class="conc-svc-name">Factibilidad</span><span class="conc-svc-desc">Estudios de viabilidad técnica y financiera</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== PROYECTOS ======================== -->
+<section id="proyectos">
+  <div class="reveal" style="text-align:center;margin-bottom:4rem">
+    <span class="section-tag">Obra Pública</span>
+    <h2 class="section-title">Proyectos Destacados</h2>
+    <div class="section-div center"></div>
+    <p class="section-text" style="margin:0 auto;text-align:center">Transformando la infraestructura del Bajío con soluciones de alumbrado público y obras civiles de alto impacto en Guanajuato.</p>
+  </div>
+  <div class="proy-grid">
+    <div class="proy-card reveal" style="transition-delay:.1s">
+      <img src="VIDEOS%20WEBSITE/villagran.jpeg" alt="Villagrán Guanajuato" loading="lazy">
+      <div class="proy-overlay">
+        <span class="proy-label">Alumbrado Público</span>
+        <div class="proy-city">Villagrán, Guanajuato</div>
+      </div>
+    </div>
+    <div class="proy-card reveal" style="transition-delay:.2s">
+      <img src="VIDEOS%20WEBSITE/dolores%20alumbrado%20imagen.jpeg" alt="Dolores Hidalgo Guanajuato" loading="lazy">
+      <div class="proy-overlay">
+        <span class="proy-label">Alumbrado Público</span>
+        <div class="proy-city">Dolores Hidalgo, Gto.</div>
+      </div>
+    </div>
+    <div class="proy-card reveal" style="transition-delay:.3s">
+      <img src="VIDEOS%20WEBSITE/ctzar%20alum.jpeg" alt="Cortazar Guanajuato" loading="lazy">
+      <div class="proy-overlay">
+        <span class="proy-label">Alumbrado Público</span>
+        <div class="proy-city">Cortazar, Guanajuato</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== ALUMBRADO PÚBLICO ======================== -->
+<section id="alumbrado-proyectos">
+  <div class="alum-inner">
+
+    <div class="alum-header reveal">
+      <span class="section-tag">Obra Pública Energética</span>
+      <h2 class="section-title" style="font-size:clamp(2rem,4vw,3.2rem)">Proyectos de Alumbrado Público</h2>
+      <p style="font-family:var(--font-body);font-size:.9rem;color:rgba(245,245,245,.55);max-width:520px;margin:.8rem auto 0;line-height:1.75">Infraestructura lumínica de alto impacto certificada en municipios de Guanajuato.</p>
+      <div class="section-div center"></div>
+    </div>
+
+    <!-- ── Dolores Hidalgo ── -->
+    <div class="alum-dolores reveal">
+      <div class="alum-city-label">Dolores Hidalgo, Guanajuato</div>
+      <h3 class="alum-dolores-title">Modernización del Alumbrado Municipal</h3>
+      <div class="alum-dolores-video-wrap">
+        <video class="dol-vid active" id="dol-vid-0" autoplay muted playsinline preload="auto">
+          <source src="VIDEOS%20WEBSITE/CIUDAD%20DOLORES%202.mp4" type="video/mp4">
+        </video>
+        <video class="dol-vid" id="dol-vid-1" muted playsinline preload="none">
+          <source src="VIDEOS%20WEBSITE/dolores%20.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- ── 3-City Próximamente grid ── -->
+    <div class="alum-prox-grid">
+
+      <!-- Celaya -->
+      <div class="alum-prox-card reveal">
+        <div class="alum-prox-city">Celaya, Guanajuato</div>
+        <div class="alum-prox-label">Alumbrado Público</div>
+        <div class="robot-wrap">
+          <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="robot-body-g">
+              <rect class="robot-ant" x="56" y="5" width="8" height="16" rx="4" fill="#C9A84C" opacity=".7"/>
+              <rect x="29" y="22" width="62" height="40" rx="8" fill="#12122a" stroke="#C9A84C" stroke-width="1.4"/>
+              <rect class="robot-eye" x="38" y="32" width="16" height="10" rx="3" fill="#C9A84C" opacity=".9"/>
+              <rect class="robot-eye" x="66" y="32" width="16" height="10" rx="3" fill="#C9A84C" opacity=".9"/>
+              <rect x="44" y="50" width="32" height="4" rx="2" fill="#C9A84C" opacity=".35"/>
+              <rect x="27" y="68" width="66" height="46" rx="6" fill="#12122a" stroke="#C9A84C" stroke-width="1.4"/>
+              <circle class="robot-gear" cx="60" cy="93" r="13" stroke="#C9A84C" stroke-width="1.4" stroke-dasharray="4 3"/>
+              <circle cx="60" cy="93" r="5" fill="#C9A84C" opacity=".3"/>
+              <circle class="robot-lgt-a" cx="38" cy="78" r="4" fill="#C9A84C"/>
+              <circle class="robot-lgt-b" cx="82" cy="78" r="4" fill="#E8C875"/>
+              <rect class="robot-arm-l" x="4" y="68" width="19" height="36" rx="5" fill="#12122a" stroke="#C9A84C" stroke-width="1.4"/>
+              <rect class="robot-arm-r" x="97" y="68" width="19" height="36" rx="5" fill="#12122a" stroke="#C9A84C" stroke-width="1.4"/>
+              <rect x="35" y="118" width="18" height="18" rx="4" fill="#12122a" stroke="#C9A84C" stroke-width="1.4"/>
+              <rect x="67" y="118" width="18" height="18" rx="4" fill="#12122a" stroke="#C9A84C" stroke-width="1.4"/>
+            </g>
+          </svg>
+        </div>
+        <div class="alum-prox-msg">Contenido en preparación</div>
+        <div class="alum-prox-soon">Próximamente</div>
+      </div>
+
+      <!-- Cortazar -->
+      <div class="alum-prox-card reveal" style="transition-delay:.15s">
+        <div class="alum-prox-city">Cortazar, Guanajuato</div>
+        <div class="alum-prox-label">Alumbrado Público</div>
+        <div class="robot-wrap">
+          <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="robot-body-g" style="animation-delay:.4s">
+              <rect class="robot-ant" x="56" y="5" width="8" height="16" rx="4" fill="#C9A84C" opacity=".7"/>
+              <rect x="29" y="22" width="62" height="40" rx="8" fill="#12122a" stroke="#C9A84C" stroke-width="1.4"/>
+              <rect class="robot-eye" x="38" y="32" width="16" height="10" rx="3" fill="#C9A84C" opacity=".9"/>
+              <rect class="robot-eye" x="66" y="32" width="16" height="10" rx="3" fill="#C9A84C" opacity=".9"/>
+              <rect x="44" y="50" width="32" height="4" rx="2" fill="#C9A84C" opacity=".35"/>
+              <rect x="27" y="68" width="66" height="46" rx="6" fill="#12122a" stroke="#C9A84C" stroke-width="1.4"/>
+              <circle class="robot-gear" cx="60" cy="93" r="13" stroke="#C9A84C" stroke-width="1.4" stroke-dasharray="4 3"/>
+              <circle cx="60" cy="93" r="5" fill="#C9A84C" opacity=".3"/>
+              <circle class="robot-lgt-a" cx="38" cy="78" r="4" fill="#C9A84C"/>
+              <circle class="robot-lgt-b" cx="82" cy="78" r="4" fill="#E8C875"/>
+              <rect class="robot-arm-l" x="4" y="68" width="19" height="36" rx="5" fill="#12122a" stroke="#C9A84C" stroke-width="1.4"/>
+              <rect class="robot-arm-r" x="97" y="68" width="19" height="36" rx="5" fill="#12122a" stroke="#C9A84C" stroke-width="1.4"/>
+              <rect x="35" y="118" width="18" height="18" rx="4" fill="#12122a" stroke="#C9A84C" stroke-width="1.4"/>
+              <rect x="67" y="118" width="18" height="18" rx="4" fill="#12122a" stroke="#C9A84C" stroke-width="1.4"/>
+            </g>
+          </svg>
+        </div>
+        <div class="alum-prox-msg">Contenido en preparación</div>
+        <div class="alum-prox-soon">Próximamente</div>
+      </div>
+
+      <!-- Villagrán -->
+      <div class="alum-prox-card reveal" style="transition-delay:.3s">
+        <div class="alum-prox-city">Villagrán, Guanajuato</div>
+        <div class="alum-prox-label">Alumbrado Público</div>
+        <div class="robot-wrap">
+          <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="robot-body-g" style="animation-delay:.8s">
+              <rect class="robot-ant" x="56" y="5" width="8" height="16" rx="4" fill="#C9A84C" opacity=".7"/>
+              <rect x="29" y="22" width="62" height="40" rx="8" fill="#12122a" stroke="#C9A84C" stroke-width="1.4"/>
+              <rect class="robot-eye" x="38" y="32" width="16" height="10" rx="3" fill="#C9A84C" opacity=".9"/>
+              <rect class="robot-eye" x="66" y="32" width="16" height="10" rx="3" fill="#C9A84C" opacity=".9"/>
+              <rect x="44" y="50" width="32" height="4" rx="2" fill="#C9A84C" opacity=".35"/>
+              <rect x="27" y="68" width="66" height="46" rx="6" fill="#12122a" stroke="#C9A84C" stroke-width="1.4"/>
+              <circle class="robot-gear" cx="60" cy="93" r="13" stroke="#C9A84C" stroke-width="1.4" stroke-dasharray="4 3"/>
+              <circle cx="60" cy="93" r="5" fill="#C9A84C" opacity=".3"/>
+              <circle class="robot-lgt-a" cx="38" cy="78" r="4" fill="#C9A84C"/>
+              <circle class="robot-lgt-b" cx="82" cy="78" r="4" fill="#E8C875"/>
+              <rect class="robot-arm-l" x="4" y="68" width="19" height="36" rx="5" fill="#12122a" stroke="#C9A84C" stroke-width="1.4"/>
+              <rect class="robot-arm-r" x="97" y="68" width="19" height="36" rx="5" fill="#12122a" stroke="#C9A84C" stroke-width="1.4"/>
+              <rect x="35" y="118" width="18" height="18" rx="4" fill="#12122a" stroke="#C9A84C" stroke-width="1.4"/>
+              <rect x="67" y="118" width="18" height="18" rx="4" fill="#12122a" stroke="#C9A84C" stroke-width="1.4"/>
+            </g>
+          </svg>
+        </div>
+        <div class="alum-prox-msg">Contenido en preparación</div>
+        <div class="alum-prox-soon">Próximamente</div>
+      </div>
+
+    </div><!-- /alum-prox-grid -->
+  </div><!-- /alum-inner -->
+</section>
+
+<!-- ======================== MAQUINARIA ======================== -->
+<section id="maquinaria">
+  <div class="maq-header reveal">
+    <span class="section-tag">Equipo de Alto Rendimiento</span>
+    <h2 class="section-title">Maquinaria Pesada</h2>
+    <div class="section-div center"></div>
+    <p class="section-text" style="margin:0 auto;text-align:center">Contamos con maquinaria nueva y usada para venta y renta. Equipos de marcas reconocidas mundialmente, disponibles con soporte técnico y cotización personalizada.</p>
+  </div>
+  <div class="machines-grid" id="machines-grid"></div>
+
+  <!-- ── CATÁLOGO DE EQUIPOS ── -->
+  <div class="cat-section">
+    <div class="cat-header reveal">
+      <span class="section-tag">Venta &amp; Renta</span>
+      <h2 class="section-title" style="font-size:clamp(2rem,4vw,3rem)">Catálogo de Equipos</h2>
+      <div class="section-div center"></div>
+      <p class="section-text" style="margin:0 auto;text-align:center">Flota disponible para venta y renta. Contáctenos para disponibilidad, tarifas y condiciones personalizadas.</p>
+    </div>
+    <div class="cat-grid">
+
+      <!-- Camiones de Basura -->
+      <div class="cat-card reveal" style="transition-delay:.05s">
+        <div class="cat-img">
+          <img class="cat-img-slide active" src="VIDEOS%20WEBSITE/basura.jpeg" alt="Camiones de Basura" loading="lazy">
+          <img class="cat-img-slide" src="VIDEOS%20WEBSITE/basura%202.jpeg" alt="Camiones de Basura 2" loading="lazy">
+          <span class="cat-badge nuevo">Nuevo</span>
+        </div>
+        <div class="cat-body">
+          <div class="cat-name">Camiones de Basura</div>
+          <p class="cat-desc">Unidades de recolección de residuos sólidos para municipios, fraccionamientos y empresas. Alta capacidad y eficiencia operativa.</p>
+          <div class="cat-type-row">
+            <a href="https://wa.me/524111250099?text=Hola%2C%20me%20interesa%20la%20VENTA%20de%20Camiones%20de%20Basura." target="_blank" rel="noopener noreferrer" class="cat-btn-venta">Venta</a>
+            <a href="https://wa.me/524111250099?text=Hola%2C%20me%20interesa%20la%20RENTA%20de%20Camiones%20de%20Basura." target="_blank" rel="noopener noreferrer" class="cat-btn-renta">Renta</a>
+          </div>
+          <a href="https://wa.me/524111250099?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Camiones%20de%20Basura." target="_blank" rel="noopener noreferrer" class="cat-wa-btn">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Grúas -->
+      <div class="cat-card reveal" style="transition-delay:.1s">
+        <div class="cat-img">
+          <img class="cat-img-slide active" src="VIDEOS%20WEBSITE/JAC.jpeg" alt="Grúas JAC" loading="lazy">
+          <img class="cat-img-slide" src="VIDEOS%20WEBSITE/GRUA.jpeg" alt="Grúas" loading="lazy">
+          <img class="cat-img-slide" src="VIDEOS%20WEBSITE/GRUA%205.jpeg" alt="Grúas 5" loading="lazy">
+          <span class="cat-badge nuevo">Nuevo</span>
+        </div>
+        <div class="cat-body">
+          <div class="cat-name">Grúas</div>
+          <p class="cat-desc">Grúas de diversas capacidades para izaje, construcción y montaje industrial. Operadas por personal certificado y con seguro de operación.</p>
+          <div class="cat-type-row">
+            <a href="https://wa.me/524111250099?text=Hola%2C%20me%20interesa%20la%20VENTA%20de%20Gr%C3%BAs." target="_blank" rel="noopener noreferrer" class="cat-btn-venta">Venta</a>
+            <a href="https://wa.me/524111250099?text=Hola%2C%20me%20interesa%20la%20RENTA%20de%20Gr%C3%BAs." target="_blank" rel="noopener noreferrer" class="cat-btn-renta">Renta</a>
+          </div>
+          <a href="https://wa.me/524111250099?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Gr%C3%BAs." target="_blank" rel="noopener noreferrer" class="cat-wa-btn">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Lowboys -->
+      <div class="cat-card reveal" style="transition-delay:.15s">
+        <div class="cat-img">
+          <img src="VIDEOS%20WEBSITE/LOW.jpeg" alt="Lowboys" loading="lazy">
+          <span class="cat-badge nuevo">Nuevo</span>
+        </div>
+        <div class="cat-body">
+          <div class="cat-name">Lowboys</div>
+          <p class="cat-desc">Plataformas de cama baja para transporte de maquinaria pesada, equipo de construcción y carga sobredimensionada en cualquier tramo nacional.</p>
+          <div class="cat-type-row">
+            <a href="https://wa.me/524111250099?text=Hola%2C%20me%20interesa%20la%20VENTA%20de%20Lowboys." target="_blank" rel="noopener noreferrer" class="cat-btn-venta">Venta</a>
+            <a href="https://wa.me/524111250099?text=Hola%2C%20me%20interesa%20la%20RENTA%20de%20Lowboys." target="_blank" rel="noopener noreferrer" class="cat-btn-renta">Renta</a>
+          </div>
+          <a href="https://wa.me/524111250099?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Lowboys." target="_blank" rel="noopener noreferrer" class="cat-wa-btn">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Tolvas -->
+      <div class="cat-card reveal" style="transition-delay:.2s">
+        <div class="cat-img">
+          <img src="VIDEOS%20WEBSITE/TOLVA%202.jpeg" alt="Tolvas" loading="lazy">
+          <span class="cat-badge nuevo">Nuevo</span>
+        </div>
+        <div class="cat-body">
+          <div class="cat-name">Tolvas</div>
+          <p class="cat-desc">Camiones tolva para transporte de materiales a granel: grava, arena, tepetate, escombro y materiales de construcción en volúmenes de gran escala.</p>
+          <div class="cat-type-row">
+            <a href="https://wa.me/524111250099?text=Hola%2C%20me%20interesa%20la%20VENTA%20de%20Tolvas." target="_blank" rel="noopener noreferrer" class="cat-btn-venta">Venta</a>
+            <a href="https://wa.me/524111250099?text=Hola%2C%20me%20interesa%20la%20RENTA%20de%20Tolvas." target="_blank" rel="noopener noreferrer" class="cat-btn-renta">Renta</a>
+          </div>
+          <a href="https://wa.me/524111250099?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Tolvas." target="_blank" rel="noopener noreferrer" class="cat-wa-btn">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Góndolas -->
+      <div class="cat-card reveal" style="transition-delay:.25s">
+        <div class="cat-img">
+          <img src="VIDEOS%20WEBSITE/gondola.jpeg" alt="Góndolas" loading="lazy">
+          <span class="cat-badge nuevo">Nuevo</span>
+        </div>
+        <div class="cat-body">
+          <div class="cat-name">Góndolas</div>
+          <p class="cat-desc">Semirremolques tipo góndola para carga pesada y de gran volumen. Plataformas extensibles, con lona y sistemas de amarre para carga segura y legal.</p>
+          <div class="cat-type-row">
+            <a href="https://wa.me/524111250099?text=Hola%2C%20me%20interesa%20la%20VENTA%20de%20G%C3%B3ndolas." target="_blank" rel="noopener noreferrer" class="cat-btn-venta">Venta</a>
+            <a href="https://wa.me/524111250099?text=Hola%2C%20me%20interesa%20la%20RENTA%20de%20G%C3%B3ndolas." target="_blank" rel="noopener noreferrer" class="cat-btn-renta">Renta</a>
+          </div>
+          <a href="https://wa.me/524111250099?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20G%C3%B3ndolas." target="_blank" rel="noopener noreferrer" class="cat-wa-btn">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Pipas de Agua -->
+      <div class="cat-card reveal" style="transition-delay:.3s">
+        <div class="cat-img">
+          <img src="VIDEOS%20WEBSITE/pipa.jpeg" alt="Pipas de Agua" loading="lazy">
+          <span class="cat-badge nuevo">Nuevo</span>
+        </div>
+        <div class="cat-body">
+          <div class="cat-name">Pipas de Agua</div>
+          <p class="cat-desc">Pipas cisterna para abastecimiento de agua en obras de construcción, fraccionamientos, eventos y zonas sin red hidráulica. Diferentes capacidades disponibles.</p>
+          <div class="cat-type-row">
+            <a href="https://wa.me/524111250099?text=Hola%2C%20me%20interesa%20la%20VENTA%20de%20Pipas%20de%20Agua." target="_blank" rel="noopener noreferrer" class="cat-btn-venta">Venta</a>
+            <a href="https://wa.me/524111250099?text=Hola%2C%20me%20interesa%20la%20RENTA%20de%20Pipas%20de%20Agua." target="_blank" rel="noopener noreferrer" class="cat-btn-renta">Renta</a>
+          </div>
+          <a href="https://wa.me/524111250099?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Pipas%20de%20Agua." target="_blank" rel="noopener noreferrer" class="cat-wa-btn">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /cat-grid -->
+  </div><!-- /cat-section -->
+
+  <!-- ── FLETES TERRESTRES ── -->
+  <div class="fletes-wrap reveal">
+    <div style="text-align:center;margin-bottom:3rem">
+      <span class="section-tag">Logística Nacional</span>
+      <h2 class="section-title" style="font-size:clamp(2rem,4vw,3rem)">Fletes Terrestres</h2>
+      <div class="section-div center"></div>
+    </div>
+    <div class="fletes-card">
+      <div class="fletes-img">
+        <img class="fletes-img-slide active" src="VIDEOS%20WEBSITE/transporte%202.jpeg" alt="Fletes Terrestres" loading="lazy">
+        <img class="fletes-img-slide" src="VIDEOS%20WEBSITE/estacas.jpeg" alt="Camiones de Estacas" loading="lazy">
+        <div class="fletes-img-overlay"></div>
+      </div>
+      <div class="fletes-body">
+        <div class="fletes-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+          <span>Servicio de Transporte</span>
+        </div>
+        <h3>Fletes en Camioneta<br><em style="color:var(--gold);font-style:italic">a Nivel Nacional</em></h3>
+        <p>Realizamos fletes terrestres en camionetas para el transporte de mercancía a nivel nacional. Servicio confiable, puntual y con seguimiento en tiempo real. Carga general, paquetería, materiales y equipo liviano con cobertura en toda la República Mexicana.</p>
+        <a href="https://wa.me/524111250099?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Fletes%20Terrestres%20en%20camioneta.%20Quisiera%20informaci%C3%B3n%20sobre%20rutas%20y%20tarifas." target="_blank" rel="noopener noreferrer" class="btn-primary" style="width:fit-content;display:inline-flex;align-items:center;gap:.65rem">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Solicitar Flete por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div><!-- /fletes-wrap -->
+
+</section>
+
+<!-- ======================== LUMINARIAS ======================== -->
+<section id="luminarias">
+  <div class="lum-header reveal">
+    <span class="section-tag">Iluminación Certificada</span>
+    <h2 class="section-title">Luminarias LED</h2>
+    <div class="section-div center"></div>
+    <p class="section-text" style="margin:0 auto;text-align:center">Luminarias LED certificadas con todos los permisos y normas requeridas para su comercialización en México. Disponibles en 4 modelos según la potencia requerida.</p>
+  </div>
+
+  <div class="lum-showcase">
+    <div class="reveal-l">
+      <div class="lum-duo-grid">
+        <div class="lum-duo-cell">
+          <img src="VIDEOS%20WEBSITE/lumm.jpeg" alt="Luminaria LED" loading="lazy">
+        </div>
+        <div class="lum-duo-cell">
+          <img src="VIDEOS%20WEBSITE/lum.jpeg" alt="Luminaria LED 2" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div class="reveal-r">
+      <span class="section-tag">Soluciones de Iluminación</span>
+      <h3 class="section-title" style="font-size:clamp(1.8rem,3.5vw,2.6rem)">Alta eficiencia, larga vida útil</h3>
+      <div class="section-div"></div>
+      <p class="section-text">Nuestras luminarias LED están fabricadas con aluminio fundido a presión ADC12 y cuentan con driver independiente certificado CE. Diseñadas para operar en condiciones extremas, desde -20°C hasta +80°C, con grado de protección IP65 y vida útil superior a 50,000 horas.</p>
+      <ul class="values-list" style="margin-top:1.5rem">
+        <li>Certificadas NOM y permisos SENER para México</li>
+        <li>Modelos de 35W, 50W, 75W y 100W disponibles</li>
+        <li>CRI Ra &gt;80 — reproducción cromática superior</li>
+        <li>Factor de potencia &gt;0.95 — alta eficiencia eléctrica</li>
+        <li>THD &lt;15% — cumplimiento normativo eléctrico</li>
+      </ul>
+      <div style="margin-top:2rem">
+        <a href="https://wa.me/524111250099?text=Hola%2C%20me%20interesan%20las%20luminarias%20LED%20y%20quisiera%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="btn-primary">Solicitar Cotización</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modelos -->
+  <div class="lum-models-grid">
+    <div class="lum-model-card reveal" style="transition-delay:.1s">
+      <div class="lum-watt">35</div>
+      <div class="lum-w-label">Watts</div>
+      <div class="lum-lm">~6,300 lm</div>
+      <div class="lum-lm-sub">Flujo luminoso</div>
+      <div class="lum-uso">Calles residenciales<br>Estacionamientos</div>
+      <div class="lum-div"></div>
+      <ul class="lum-mini-specs">
+        <li>AC 100–277 V</li>
+        <li>IP65 / -20°C a +80°C</li>
+        <li>&gt;50,000 h vida útil</li>
+        <li>CRI Ra &gt;80</li>
+      </ul>
+    </div>
+    <div class="lum-model-card reveal" style="transition-delay:.2s">
+      <div class="lum-watt">50</div>
+      <div class="lum-w-label">Watts</div>
+      <div class="lum-lm">~9,000 lm</div>
+      <div class="lum-lm-sub">Flujo luminoso</div>
+      <div class="lum-uso">Vialidades secundarias<br>Áreas comerciales</div>
+      <div class="lum-div"></div>
+      <ul class="lum-mini-specs">
+        <li>AC 100–277 V</li>
+        <li>IP65 / -20°C a +80°C</li>
+        <li>&gt;50,000 h vida útil</li>
+        <li>CRI Ra &gt;80</li>
+      </ul>
+    </div>
+    <div class="lum-model-card reveal" style="transition-delay:.3s">
+      <div class="lum-watt">75</div>
+      <div class="lum-w-label">Watts</div>
+      <div class="lum-lm">~13,500 lm</div>
+      <div class="lum-lm-sub">Flujo luminoso</div>
+      <div class="lum-uso">Vialidades primarias<br>Parques industriales</div>
+      <div class="lum-div"></div>
+      <ul class="lum-mini-specs">
+        <li>AC 100–277 V</li>
+        <li>IP65 / -20°C a +80°C</li>
+        <li>&gt;50,000 h vida útil</li>
+        <li>CRI Ra &gt;80</li>
+      </ul>
+    </div>
+    <div class="lum-model-card reveal" style="transition-delay:.4s" style="border-color:rgba(201,168,76,.32)">
+      <div class="lum-watt" style="font-size:3.2rem">100</div>
+      <div class="lum-w-label">Watts — Ref. QH-STL-SC-100W</div>
+      <div class="lum-lm">18,000–20,000 lm</div>
+      <div class="lum-lm-sub">Flujo luminoso total</div>
+      <div class="lum-uso">Autopistas &bull; Grandes superficies<br>Industria pesada</div>
+      <div class="lum-div"></div>
+      <ul class="lum-mini-specs">
+        <li>LED 3030 SMD, 150 pzas</li>
+        <li>IP65 / -20°C a +80°C</li>
+        <li>&gt;50,000 h vida útil</li>
+        <li>143 lux @ 6 m altura</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Especificaciones Comunes -->
+  <div class="lum-common-box reveal">
+    <h3>Especificaciones Técnicas Comunes — Todos los Modelos</h3>
+    <div class="lum-specs-grid">
+      <div class="lum-spec-row"><span class="lsr-lbl">Voltaje de Entrada</span><span class="lsr-val">AC 100 – 277 V</span></div>
+      <div class="lum-spec-row"><span class="lsr-lbl">Driver LED</span><span class="lsr-val">Certificado CE, Independiente</span></div>
+      <div class="lum-spec-row"><span class="lsr-lbl">Rango de Frecuencia</span><span class="lsr-val">50 Hz / 60 Hz</span></div>
+      <div class="lum-spec-row"><span class="lsr-lbl">Factor de Potencia</span><span class="lsr-val">&gt; 0.95</span></div>
+      <div class="lum-spec-row"><span class="lsr-lbl">THD</span><span class="lsr-val">&lt; 15%</span></div>
+      <div class="lum-spec-row"><span class="lsr-lbl">Tipo de LED</span><span class="lsr-val">3030 SMD</span></div>
+      <div class="lum-spec-row"><span class="lsr-lbl">Índice Cromático (CRI)</span><span class="lsr-val">Ra &gt; 80</span></div>
+      <div class="lum-spec-row"><span class="lsr-lbl">Ángulo del Haz</span><span class="lsr-val">75° × 165°</span></div>
+      <div class="lum-spec-row"><span class="lsr-lbl">Temperatura de Color</span><span class="lsr-val">3,000 K – 6,500 K (seleccionable)</span></div>
+      <div class="lum-spec-row"><span class="lsr-lbl">Grado de Protección</span><span class="lsr-val">IP65</span></div>
+      <div class="lum-spec-row"><span class="lsr-lbl">Temperatura de Trabajo</span><span class="lsr-val">-20 °C a +80 °C</span></div>
+      <div class="lum-spec-row"><span class="lsr-lbl">Vida Útil Estimada</span><span class="lsr-val">&gt; 50,000 horas</span></div>
+      <div class="lum-spec-row"><span class="lsr-lbl">Material Carcasa</span><span class="lsr-val">Aluminio fundido ADC12</span></div>
+      <div class="lum-spec-row"><span class="lsr-lbl">Material Lente</span><span class="lsr-val">Policarbonato (PC) — UL94-V0</span></div>
+      <div class="lum-spec-row"><span class="lsr-lbl">Protección Sobretensión</span><span class="lsr-val">L-N 4 kV / L/N-GND 6 kV</span></div>
+    </div>
+    <div style="margin-top:2rem;text-align:center">
+      <a href="https://wa.me/524111250099?text=Hola%2C%20me%20interesan%20las%20luminarias%20LED%20y%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20modelos%20y%20precios." target="_blank" rel="noopener noreferrer" class="btn-primary">Consultar Modelos y Precios</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== MEDIDORES ======================== -->
+<section id="medidores">
+  <div class="med-header reveal">
+    <span class="section-tag">Medición Certificada NOM</span>
+    <h2 class="section-title">Medidores de Agua</h2>
+    <div class="section-div center"></div>
+    <p class="section-text" style="margin:0 auto;text-align:center">Medidores certificados con normas NOM, disponibles en versión mecánica y con tecnología de telemedición inteligente. Aptos para licitaciones de organismos operadores de agua.</p>
+  </div>
+
+  <div class="medidores-grid">
+    <!-- MEDIDOR REGULAR -->
+    <div class="medidor-card reveal-l">
+      <div class="med-img-wrap">
+        <img src="MEDIDOR REGULAR/MEDIDOR REGULAR.jpeg" alt="Medidor de Agua Regular" loading="lazy">
+        <span class="med-type-badge">Medidor Volumétrico</span>
+      </div>
+      <div class="med-body">
+        <h3>Medidor Regular</h3>
+        <span class="med-sub">Mecánico de Chorro Múltiple</span>
+        <p class="med-desc">El medidor regular de lectura mecánica es la solución confiable y de bajo costo para la medición de agua potable en aplicaciones domésticas y comerciales. Alta relación Q3/Q1 de 100, garantizando precisión tanto en caudales mínimos como máximos. Certificado NOM para su uso en sistemas municipales y privados.</p>
+        <div class="med-tag-row">
+          <span class="med-tag">NOM Certificado</span>
+          <span class="med-tag">Q3/Q1 = 100</span>
+          <span class="med-tag">DN15 / DN20 / DN25</span>
+        </div>
+        <table class="med-specs-tbl">
+          <thead><tr><th>Calibre</th><th>Q3 Nominal</th><th>Q4 Sobrecarga</th><th>Peso</th></tr></thead>
+          <tbody>
+            <tr><td>DN15</td><td>3.0 m³/h</td><td>100 m³/h</td><td>0.7 kg</td></tr>
+            <tr><td>DN20</td><td>4.0 m³/h</td><td>100 m³/h</td><td>0.7 kg</td></tr>
+            <tr><td>DN25</td><td>6.3 m³/h</td><td>100 m³/h</td><td>1.0 kg</td></tr>
+          </tbody>
+        </table>
+        <table class="med-specs-tbl" style="margin-bottom:1.5rem">
+          <thead><tr><th>Calibre</th><th>Largo (mm)</th><th>Ancho (mm)</th><th>Alto (mm)</th></tr></thead>
+          <tbody>
+            <tr><td>DN15</td><td>165</td><td>92</td><td>113</td></tr>
+            <tr><td>DN20</td><td>195</td><td>98</td><td>114</td></tr>
+            <tr><td>DN25</td><td>225</td><td>103</td><td>114</td></tr>
+          </tbody>
+        </table>
+        <a href="https://wa.me/524111250099?text=Hola%2C%20me%20interesan%20los%20medidores%20de%20agua%20regulares%20y%20quisiera%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="btn-primary" style="width:100%;text-align:center;display:block">Solicitar Cotización</a>
+      </div>
+    </div>
+
+    <!-- MEDIDOR INTELIGENTE -->
+    <div class="medidor-card reveal-r">
+      <div class="med-img-wrap">
+        <img src="MEDIDORES INTELIGENTES/MEDIDORES.jpeg" alt="Medidor de Agua Inteligente" loading="lazy">
+        <span class="med-type-badge">Medidor Inteligente</span>
+        <span class="med-smart-badge">IoT / NB-IoT</span>
+      </div>
+      <div class="med-body">
+        <h3>Medidor Inteligente</h3>
+        <span class="med-sub">Telemedición LoRaWAN / NB-IoT</span>
+        <p class="med-desc">El medidor inteligente incorpora tecnología LoRaWAN y NB-IoT para telemedición en tiempo real, eliminando las lecturas manuales y optimizando la gestión del servicio de agua. Con grado de protección IP68 (sumergible), batería de larga duración de 3.6V y comunicación inalámbrica — ideal para modernización de organismos operadores.</p>
+        <div class="med-tag-row">
+          <span class="med-tag">LoRaWAN / NB-IoT</span>
+          <span class="med-tag">IP68</span>
+          <span class="med-tag">Clase B</span>
+          <span class="med-tag">T30</span>
+        </div>
+        <table class="med-specs-tbl">
+          <thead><tr><th>Calibre</th><th>Q1 Mínimo</th><th>Q3 Máximo</th><th>Q3/Q1</th></tr></thead>
+          <tbody>
+            <tr><td>DN15</td><td>0.031 m³/h</td><td>3.1 m³/h</td><td>80</td></tr>
+            <tr><td>DN20</td><td>0.050 m³/h</td><td>5.0 m³/h</td><td>80</td></tr>
+            <tr><td>DN25</td><td>0.079 m³/h</td><td>7.9 m³/h</td><td>80</td></tr>
+          </tbody>
+        </table>
+        <table class="med-specs-tbl" style="margin-bottom:1.5rem">
+          <thead><tr><th>Especificación</th><th>Valor</th></tr></thead>
+          <tbody>
+            <tr><td>Clase de Precisión</td><td>Clase B</td></tr>
+            <tr><td>Presión de Trabajo</td><td>≤ 1.6 MPa</td></tr>
+            <tr><td>Grado de Protección</td><td>IP68 (sumergible)</td></tr>
+            <tr><td>Temperatura del Agua</td><td>T30</td></tr>
+            <tr><td>Modo de Comunicación</td><td>LoRaWAN / NB-IoT</td></tr>
+            <tr><td>Alimentación</td><td>3.6 V (batería)</td></tr>
+          </tbody>
+        </table>
+        <a href="https://wa.me/524111250099?text=Hola%2C%20me%20interesan%20los%20medidores%20inteligentes%20con%20LoRaWAN%20y%20quisiera%20una%20propuesta%20t%C3%A9cnica." target="_blank" rel="noopener noreferrer" class="btn-primary" style="width:100%;text-align:center;display:block">Solicitar Propuesta Técnica</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICACIONES -->
+<section id="certificaciones">
+  <div class="cert-header reveal">
+    <span class="section-tag">Calidad Garantizada</span>
+    <h2 class="section-title">Certificaciones y Permisos</h2>
+    <div class="section-div center"></div>
+    <p class="section-text" style="margin:0 auto;text-align:center">Todos nuestros productos cuentan con las certificaciones y permisos requeridos por la normatividad mexicana vigente.</p>
+  </div>
+  <div class="cert-grid">
+    <div class="cert-card reveal" style="transition-delay:.1s">
+      <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+      <h3>Normas NOM</h3>
+      <p>Productos que cumplen con las Normas Oficiales Mexicanas aplicables, garantizando calidad y seguridad en todos los sectores.</p>
+      <span class="cert-badge">NOM Certificado</span>
+    </div>
+    <div class="cert-card reveal" style="transition-delay:.2s">
+      <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M7 10h10M7 14h4"/></svg>
+      <h3>Permisos de Comercialización</h3>
+      <p>Todos los permisos necesarios para la comercialización legal de nuestros productos en territorio mexicano, emitidos por las autoridades competentes.</p>
+      <span class="cert-badge">Autorizado en México</span>
+    </div>
+    <div class="cert-card reveal" style="transition-delay:.3s">
+      <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+      <h3>Respaldo Internacional</h3>
+      <p>Fabricantes y marcas de reconocimiento internacional: Caterpillar, Cummins, Kawasaki, Yuchai, Weichai y más.</p>
+      <span class="cert-badge">Estándares Globales</span>
+    </div>
+  </div>
+  <div class="cert-stmt reveal">
+    <blockquote>"Todos nuestros productos cuentan con certificados NOM y permisos para su comercialización en México, garantizando operaciones apegadas a la legalidad y los más altos estándares de calidad."</blockquote>
+    <cite>— G-SALO, Celaya, Guanajuato</cite>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="contacto-grid">
+    <div class="reveal-l">
+      <span class="section-tag">Comuníquese con Nosotros</span>
+      <div class="contacto-info">
+        <h2>¿Listo para hablar con <em>un experto</em>?</h2>
+        <div class="section-div"></div>
+        <p class="section-text">Nuestro equipo está disponible para atender sus requerimientos. Contáctenos por cualquiera de nuestros canales.</p>
+      </div>
+      <div class="contacto-items">
+        <div class="citem">
+          <div class="citem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 8 8l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><p class="citem-lbl">Teléfono / WhatsApp</p><p class="citem-val"><a href="https://wa.me/524111250099" target="_blank" rel="noopener noreferrer">+52 411 125 0099</a></p></div>
+        </div>
+        <div class="citem">
+          <div class="citem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><p class="citem-lbl">Correo Electrónico</p><p class="citem-val"><a href="mailto:lj.manjarrez@gecc.com.mx">lj.manjarrez@gecc.com.mx</a></p></div>
+        </div>
+        <div class="citem">
+          <div class="citem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><p class="citem-lbl">Ubicación</p><p class="citem-val">Celaya, Guanajuato, México</p></div>
+        </div>
+        <div class="citem">
+          <div class="citem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <div><p class="citem-lbl">Cobertura</p><p class="citem-val">Bajío — Guanajuato, Querétaro,<br>SLP y toda la República</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="cform reveal-r">
+      <h3 class="cform-title">Envíe su Consulta</h3>
+      <form id="contact-form" novalidate>
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="frow">
+          <div class="fgroup" id="fg-nombre"><label class="flabel" for="f-nombre">Nombre *</label><input type="text" id="f-nombre" name="nombre" class="finput" placeholder="Su nombre completo" maxlength="100" autocomplete="name"><span class="ferr">Ingrese su nombre.</span></div>
+          <div class="fgroup" id="fg-empresa"><label class="flabel" for="f-empresa">Empresa</label><input type="text" id="f-empresa" name="empresa" class="finput" placeholder="Su empresa" maxlength="150" autocomplete="organization"></div>
+        </div>
+        <div class="frow">
+          <div class="fgroup" id="fg-email"><label class="flabel" for="f-email">Correo *</label><input type="email" id="f-email" name="email" class="finput" placeholder="correo@empresa.com" maxlength="254" autocomplete="email"><span class="ferr">Correo inválido.</span></div>
+          <div class="fgroup" id="fg-tel"><label class="flabel" for="f-tel">Teléfono</label><input type="tel" id="f-tel" name="telefono" class="finput" placeholder="+52 XXX XXX XXXX" maxlength="20" autocomplete="tel"></div>
+        </div>
+        <div class="fgroup" id="fg-interes">
+          <label class="flabel" for="f-interes">Área de Interés *</label>
+          <select id="f-interes" name="interes" class="fselect finput">
+            <option value="">— Seleccione —</option>
+            <option value="Maquinaria - Venta">Maquinaria Pesada — Venta</option>
+            <option value="Maquinaria - Renta">Maquinaria Pesada — Renta</option>
+            <option value="Luminarias">Luminarias LED</option>
+            <option value="Medidores Regular">Medidores de Agua Regular</option>
+            <option value="Medidores Inteligentes">Medidores Inteligentes</option>
+            <option value="Otro">Otro</option>
+          </select>
+          <span class="ferr">Seleccione un área.</span>
+        </div>
+        <div class="fgroup" id="fg-mensaje"><label class="flabel" for="f-mensaje">Mensaje *</label><textarea id="f-mensaje" name="mensaje" class="ftextarea" placeholder="Describa su requerimiento, modelo, cantidad..." maxlength="2000"></textarea><span class="ferr">Escriba su mensaje (mín. 10 caracteres).</span></div>
+        <button type="submit" class="btn-primary" id="f-submit" style="width:100%;border:none;cursor:pointer">Enviar Mensaje</button>
+      </form>
+      <div id="form-ok">
+        <div class="ok-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h3>¡Mensaje Enviado!</h3>
+        <p>Gracias por contactarnos. Un asesor le responderá a la brevedad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="f-brand">
+      <span class="f-brand-logo">G-<span>SALO</span></span>
+      <p>Grupo empresarial líder en el Bajío mexicano. Celaya, Guanajuato. Maquinaria pesada, medidores de agua y luminarias certificadas para la industria y el gobierno.</p>
+    </div>
+    <div class="f-col">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#que-hacemos">¿Qué Hacemos?</a></li>
+        <li><a href="#concesiones">Concesiones</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#empresas">Nuestras Empresas</a></li>
+        <li><a href="#maquinaria">Maquinaria</a></li>
+        <li><a href="#medidores">Medidores</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Productos</h4>
+      <ul>
+        <li><a href="#maquinaria">Excavadoras</a></li>
+        <li><a href="#maquinaria">Bulldozers</a></li>
+        <li><a href="#maquinaria">Motoniveladoras</a></li>
+        <li><a href="#luminarias">Luminarias LED</a></li>
+        <li><a href="#medidores">Medidores NOM</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="https://wa.me/524111250099" target="_blank" rel="noopener noreferrer">+52 411 125 0099</a></li>
+        <li><a href="mailto:lj.manjarrez@gecc.com.mx">lj.manjarrez@gecc.com.mx</a></li>
+        <li><a href="#contacto">Celaya, Guanajuato</a></li>
+        <li><a href="#certificaciones">Certificaciones</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-btm">
+    <p>&copy; 2025 G-SALO. Todos los derechos reservados.</p>
+    <div class="f-legal"><a href="#">Aviso de Privacidad</a><a href="#">Términos de Uso</a></div>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<div id="wa-float">
+  <span class="wa-tip">Chatea con nosotros</span>
+  <a href="https://wa.me/524111250099" target="_blank" rel="noopener noreferrer" class="wa-btn" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+</div>
+<button id="btt" aria-label="Volver arriba"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></button>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="spec-modal" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close-btn" aria-label="Cerrar">&times;</button>
+    <div class="modal-top">
+      <div class="modal-gallery">
+        <div class="modal-main-img"><img id="m-main-img" src="" alt=""></div>
+        <div class="modal-thumbs" id="m-thumbs"></div>
+      </div>
+      <div class="modal-info">
+        <span class="m-type-tag" id="m-type"></span>
+        <div class="m-model-name" id="m-model"></div>
+        <p class="m-desc" id="m-desc"></p>
+        <div class="m-key" id="m-key"></div>
+        <div class="modal-ctas">
+          <a id="m-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary">Solicitar Cotización</a>
+          <a href="#contacto" class="btn-outline" id="m-contact-btn">Enviar Consulta</a>
+        </div>
+      </div>
+    </div>
+    <div class="modal-specs-wrap">
+      <h3>Especificaciones Técnicas</h3>
+      <table class="specs-tbl" id="m-specs-tbl"></table>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+/* ---- Machine Data ---- */
+var machines = [
+  {
+    id:'420f',
+    model:'420F',
+    type:'Retroexcavadora Cargadora',
+    badge:'Disponible',badgeClass:'disp',
+    imgs:['420F/420F.jpeg','420F/420F2.jpeg'],
+    desc:'La 420F es una retroexcavadora cargadora versátil y potente, reconocida por su durabilidad, maniobrabilidad y sistemas hidráulicos avanzados. Ideal para construcción, obras de servicios públicos, paisajismo y operaciones municipales. Cabina climatizada ROPS/FOPS con ergonomía de última generación.',
+    key:[['Potencia','93 HP (69 kW)'],['Peso Op.','7,500 – 8,200 kg'],['Prof. Excav.','4.4 m'],['Cap. Cucharón','0.14 – 0.20 m³']],
+    specs:[['Modelo','420F'],['Tipo','Retroexcavadora Cargadora'],['Motor','Cummins Diesel Turboalimentado'],['Potencia Neta','93 HP (69 kW)'],['Peso Operativo','7,500 – 8,200 kg'],['Prof. Máx. Excavación','4.4 m (14 ft 3 in)'],['Cap. Cucharón Retro','0.14 – 0.20 m³'],['Cap. Cucharón Cargadora','1.0 m³'],['Transmisión','Powershift, 4 velocidades adelante/reversa'],['Tanque Combustible','160 L'],['Tracción','2WD'],['Cabina','Cerrada ROPS/FOPS, calefacción y A/C']],
+    wa:'Hola%2C%20me%20interesa%20la%20Retroexcavadora%20420F%20y%20quisiera%20una%20cotizaci%C3%B3n.'
+  },
+  {
+    id:'cb534d',
+    model:'CB534D',
+    type:'Compactadora de Asfalto',
+    badge:'Disponible',badgeClass:'disp',
+    imgs:['CB534D/RODILLO.jpeg'],
+    desc:'La Caterpillar CB534D es una máquina de alto rendimiento para proyectos de pavimentación a gran escala. Motor C4.4 ACERT de 140 HP con sistema de vibración avanzado que garantiza superficies uniformes y de alta calidad en carreteras, aeropuertos y vías urbanas.',
+    key:[['Potencia','140 HP (104 kW)'],['Ancho Trabajo','7.6 m (ajust.)'],['Vel. Máxima','20 km/h'],['Espesor Pav.','0.05 – 0.20 m']],
+    specs:[['Motor','Caterpillar C4.4 ACERT'],['Potencia','104 kW (140 HP) @ 2,200 rpm'],['Ancho Máx. Trabajo','7.6 m (ajustable)'],['Velocidad Máxima','20 km/h'],['Espesor Pavimentación','0.05 – 0.20 m'],['Rango Ancho Pav.','2.5 – 7.6 m'],['Vel. Pavimentación','0.2 – 25 m/min'],['Sistema Vibración','Tecnología avanzada multimaterial'],['Cabina','A/C, calefacción, insonorizada'],['Interfaz','Pantalla LCD monitoreo en tiempo real'],['Seguridad','Parada emergencia, alarma retroceso']],
+    wa:'Hola%2C%20me%20interesa%20la%20Compactadora%20CB534D%20y%20quisiera%20una%20cotizaci%C3%B3n.'
+  },
+  {
+    id:'d7g',
+    model:'D7G',
+    type:'Bulldozer',
+    badge:'2022',badgeClass:'used',
+    imgs:['D7G/BULLDOZER D7G.jpeg','D7G/D7G 2.jpeg'],
+    desc:'El Bulldozer D7G modelo 2022 es una máquina robusta, confiable y de alto rendimiento, ideal para trabajos de construcción, movimiento de tierra y preparación de terrenos. Motor Cummins de 200 HP con hoja tipo S Straight Blade y fuerza de tracción de 323 kN para los proyectos más exigentes.',
+    key:[['Potencia','200 HP (149 kW)'],['Peso Op.','21,000 – 22,000 kg'],['Cap. Hoja','5.58 m³'],['Fuerza Tracción','323 kN']],
+    specs:[['Año','2022'],['Motor','Cummins, 200 HP (149 kW)'],['Desplazamiento','14.0 L'],['Transmisión','Powershift 3F / 3R'],['Peso Operativo','21,000 – 22,000 kg'],['Tipo de Hoja','S (Straight Blade)'],['Capacidad de Hoja','5.58 m³'],['Ancho de Hoja','3.25 – 3.45 m'],['Fuerza de Tracción Máx.','323 kN (72,600 lbf)'],['Zapatas Disponibles','22", 24", 26"'],['Escarificador','3 dientes'],['Tanque Combustible','400 L mínimo'],['Cabina','Cerrada ROPS, A/C opcional']],
+    wa:'Hola%2C%20me%20interesa%20el%20Bulldozer%20D7G%202022%20y%20quisiera%20una%20cotizaci%C3%B3n.'
+  },
+  {
+    id:'hw22de',
+    model:'HW22DE',
+    type:'Motoniveladora',
+    badge:'Disponible',badgeClass:'disp',
+    imgs:['HW22DE/HW22DE.jpeg','HW22DE/HW22DE 2.jpeg'],
+    desc:'La Motoniveladora HW22DE es una máquina de precisión para la conformación y nivelación de terrenos con los más altos estándares. Motor Cummins turbo intercooler de 160 kW y cuchilla de rotación 360° — ideal para carreteras, bases y obras de infraestructura de gran envergadura.',
+    key:[['Potencia','160 kW (215 HP)'],['Peso Op.','17,000 kg'],['Long. Cuchilla','3,660 – 4,270 mm'],['Rot. Cuchilla','360°']],
+    specs:[['Tipo','Motoniveladora'],['Motor','Cummins 6CTAA8.3-C215'],['Tipo Motor','4T, inyección directa, turbo intercooler aire-aire'],['Potencia','160 kW (215 HP)'],['Torque Máximo','980 N·m'],['Peso Operativo','17,000 kg'],['Sistema Dirección','Hidráulica total, ±45°'],['Radio Mín. de Giro','8,200 mm'],['Longitud Cuchilla','3,660 / 3,965 / 4,270 mm'],['Rotación Cuchilla','360°'],['Altura Cuchilla','635 mm'],['Long. Total (estándar)','9,430 mm']],
+    wa:'Hola%2C%20me%20interesa%20la%20Motoniveladora%20HW22DE%20y%20quisiera%20una%20cotizaci%C3%B3n.'
+  },
+  {
+    id:'hw22g',
+    model:'HW22G',
+    type:'Motoniveladora',
+    badge:'Disponible',badgeClass:'disp',
+    imgs:['HW22G/HW22G.jpeg'],
+    desc:'La Motoniveladora HW22G combina potencia y versatilidad en un diseño compacto y eficiente. Motor Cummins de alta performance con sistema hidráulico de precisión — la herramienta perfecta para nivelación, conformación y mantenimiento de caminos, vialidades y superficies de trabajo.',
+    key:[['Potencia','160 kW'],['Ancho Máquina','2,600 mm'],['Altura Total','3,400 mm'],['Alt. Libre Suelo','430 mm']],
+    specs:[['Tipo','Motoniveladora'],['Motor','Cummins 6CTAA8.3-C215'],['Potencia','160 kW'],['Altura Total','3,400 mm'],['Ancho de Vía','2,155 mm'],['Ancho de Máquina','2,600 mm'],['Altura Mín. al Suelo','430 mm'],['Batalla Eje Trasero','1,550 mm']],
+    wa:'Hola%2C%20me%20interesa%20la%20Motoniveladora%20HW22G%20y%20quisiera%20una%20cotizaci%C3%B3n.'
+  },
+  {
+    id:'hw4028',
+    model:'HW40-28',
+    type:'Retroexcavadora Cargadora',
+    badge:'Disponible',badgeClass:'disp',
+    imgs:['HW40-28/HW40-28.jpeg'],
+    desc:'La Retroexcavadora HW40-28 es la solución 2-en-1 definitiva: capacidad de carga frontal y excavación trasera en un solo equipo. Motor Yuchai turboalimentado de 75 kW con transmisión de convertidor de par y sistema hidráulico de alta respuesta.',
+    key:[['Potencia','75 kW (100 HP)'],['Peso Op.','8,200 kg'],['Cap. Cargadora','1.0 m³'],['Cap. Retro','0.3 m³']],
+    specs:[['Tipo','Retroexcavadora Cargadora'],['Motor','Yuchai 4A105Z-T20'],['Potencia','75 kW @ 2,200 rpm'],['Torque Máximo','400 N·m'],['Peso Operativo','8,200 kg'],['Dimensiones (L×W×H)','6,050 × 2,465 × 3,100 mm'],['Velocidad Máxima','24 km/h'],['Tracción Máxima','60 kN'],['Cap. Cucharón Cargadora','1.0 m³ — Fuerza arranque 47 kN'],['Cap. Cucharón Retro','0.3 m³'],['Ángulo Giro Cucharón Retro','180°'],['Sistema Frenos','Disco con pinzas hidro-neumáticas, autoajustable'],['Neumáticos','14-17.5 / 19.5-24']],
+    wa:'Hola%2C%20me%20interesa%20la%20Retroexcavadora%20HW40-28%20y%20quisiera%20una%20cotizaci%C3%B3n.'
+  },
+  {
+    id:'hw2209a',
+    model:'HW220-9A',
+    type:'Excavadora Hidráulica',
+    badge:'NUEVA 2026',badgeClass:'new-unit',
+    imgs:['HW220-9A/HWW220-9A.jpeg','HW220-9A/HW220-9A 2.jpeg'],
+    desc:'La Excavadora Hidráulica HW220-9A 2026 representa lo último en tecnología de excavación sobre orugas. Nueva de fábrica, con sistema hidráulico Kawasaki de pistón variable, motor Cummins de 178 HP y profundidad máxima de excavación de 6.49 metros para los proyectos más exigentes del mercado.',
+    key:[['Potencia','133 kW (178 HP)'],['Peso Op.','21,600 kg'],['Cap. Cucharón','1.05 m³'],['Prof. Excavación','6,490 mm']],
+    specs:[['Modelo','HW220-9A'],['Condición','Nueva 2026'],['Tipo','Excavadora Hidráulica s/Orugas'],['Motor','Cummins 6BTAA5.9 C178 II'],['Potencia','133 kW (178 HP)'],['Torque Máximo','708 N·m'],['Peso Operativo','21,600 kg'],['Cap. Cucharón','1.05 m³'],['Sistema Hidráulico','Kawasaki, bomba de pistón variable'],['Vel. Desplazamiento','3.1 – 6.0 km/h'],['Fuerza del Cucharón','146 kN'],['Fuerza del Brazo','109 kN'],['Tanque Combustible','330 L'],['Prof. Máx. Excavación','6,490 mm'],['Altura Máx. Excavación','10,950 mm'],['Ancho Total','2,980 mm'],['Altura Total','3,050 mm'],['Sistema Eléctrico','24 V']],
+    wa:'Hola%2C%20me%20interesa%20la%20Excavadora%20HW220-9A%20Nueva%202026%20y%20quisiera%20una%20cotizaci%C3%B3n.'
+  },
+  {
+    id:'hwts125',
+    model:'HWTS125',
+    type:'Cargadora Frontal Compacta',
+    badge:'Disponible',badgeClass:'disp',
+    imgs:['HWTS125/HWTS125.jpeg'],
+    desc:'La Cargadora HWTS125 es la combinación perfecta de potencia y maniobrabilidad para operaciones en espacios reducidos. Motor Weichai de 103 kW, carga nominal de 1,500 kg y altura máxima de operación de 4.07 metros para máxima productividad en cada jornada.',
+    key:[['Potencia','103 kW / 2,300 rpm'],['Peso Op.','5,100 kg'],['Carga Nominal','1,500 kg'],['Cap. Cucharón','0.6 m³']],
+    specs:[['Tipo','Cargadora Frontal Compacta'],['Motor','Weichai WP4.1'],['Potencia','103 kW / 2,300 rpm'],['Cilindrada','4.088 L'],['Peso Operativo','5,100 kg'],['Carga Nominal','1,500 kg'],['Cap. Cucharón','0.6 m³'],['Vel. Máxima','12 / 18 km/h'],['Tracción Máxima','≥ 32 kN'],['Fuerza Arranque Máx.','≥ 22 kN'],['Altura Máx. Operación','4,070 mm'],['Alt. Pivote Cucharón','3,150 mm'],['Altura de Descarga','2,450 mm'],['Alcance de Descarga','700 mm'],['Distancia entre Ejes','1,500 mm'],['Ancho de Vía','1,674 mm'],['Ancho de Máquina','2,124 mm']],
+    wa:'Hola%2C%20me%20interesa%20la%20Cargadora%20HWTS125%20y%20quisiera%20una%20cotizaci%C3%B3n.'
+  },
+  {
+    id:'sem921',
+    model:'SEM 921',
+    type:'Motoniveladora',
+    badge:'2021 — 2,315 h',badgeClass:'used',
+    imgs:['SEM 921/SEM 921.jpeg','SEM 921/SEM 921 2.jpeg'],
+    desc:'La Motoniveladora SEM921 (2021) es un equipo de alta performance con apenas 2,315 horas de uso. Motor SDEC de 217 HP con transmisión Countershaft Powershift, hoja de 4.279 metros y velocidad máxima de 39 km/h. Excelente condición para nivelación y conformación de vialidades e infraestructura.',
+    key:[['Potencia','162 kW (217 HP)'],['Peso Total','17,760 kg'],['Long. Hoja','4,279 mm'],['Vel. Máxima','39 km/h']],
+    specs:[['Año','2021'],['Horas de Uso','2,315 h'],['Motor','SDEC SC9D220G2'],['Potencia','162 kW (217 HP)'],['Torque Pico','920 N·m'],['Peso Base Total','15,930 kg'],['Peso c/Hoja y Ripper','17,760 kg'],['Longitud de Hoja','4,279 mm'],['Fuerza de Tiro Máx.','≥ 85 kN'],['Velocidad Máxima','39 km/h'],['Sistema Hidráulico','22 MPa, Load Sensing'],['Ángulo de Dirección','47.5° izq / der'],['Transmisión','Hangcha 6WG180, Countershaft Powershift'],['Llantas','17.5-25'],['Oscilación Delantera','15°'],['Oscilación Trasera','25°']],
+    wa:'Hola%2C%20me%20interesa%20la%20Motoniveladora%20SEM921%202021%20y%20quisiera%20una%20cotizaci%C3%B3n.'
+  }
+];
+
+/* ---- Render Machine Cards ---- */
+var grid = document.getElementById('machines-grid');
+machines.forEach(function(m, i){
+  var delay = (i % 3) * 0.12;
+  var card = document.createElement('div');
+  card.className = 'machine-card reveal';
+  card.setAttribute('data-id', m.id);
+  card.style.transitionDelay = delay + 's';
+  card.innerHTML =
+    '<div class="mc-img">' +
+      '<img src="' + m.imgs[0] + '" alt="' + m.model + ' ' + m.type + '" loading="lazy">' +
+      '<span class="mc-type">' + m.type + '</span>' +
+      '<span class="mc-badge ' + m.badgeClass + '">' + m.badge + '</span>' +
+    '</div>' +
+    '<div class="mc-body">' +
+      '<div class="mc-model">' + m.model + '</div>' +
+      '<div class="mc-specs">' +
+        m.key.map(function(k){ return '<div class="kspec"><span class="ks-label">' + k[0] + '</span><span class="ks-val">' + k[1] + '</span></div>'; }).join('') +
+      '</div>' +
+      '<div class="mc-actions">' +
+        '<a href="https://wa.me/524111250099?text=' + m.wa + '" target="_blank" rel="noopener noreferrer" class="btn-primary mc-btn-cot">Cotizar</a>' +
+        '<button class="mc-btn-ficha" data-id="' + m.id + '">Ver Ficha</button>' +
+      '</div>' +
+    '</div>';
+  grid.appendChild(card);
+});
+
+/* ---- Modal ---- */
+var modal = document.getElementById('spec-modal');
+var mMainImg = document.getElementById('m-main-img');
+var mThumbs = document.getElementById('m-thumbs');
+var mType = document.getElementById('m-type');
+var mModel = document.getElementById('m-model');
+var mDesc = document.getElementById('m-desc');
+var mKey = document.getElementById('m-key');
+var mWaBtn = document.getElementById('m-wa-btn');
+var mSpecs = document.getElementById('m-specs-tbl');
+
+function openModal(id){
+  var m = machines.find(function(x){ return x.id === id; });
+  if(!m) return;
+  mType.textContent = m.type;
+  mModel.textContent = m.model;
+  mDesc.textContent = m.desc;
+  mMainImg.src = m.imgs[0];
+  mMainImg.alt = m.model;
+  mWaBtn.href = 'https://wa.me/524111250099?text=' + m.wa;
+
+  // Thumbs
+  mThumbs.innerHTML = '';
+  m.imgs.forEach(function(src, i){
+    var img = document.createElement('img');
+    img.src = src; img.alt = m.model + ' ' + (i+1);
+    img.className = 'mthumb' + (i===0?' active':'');
+    img.addEventListener('click', function(){
+      mMainImg.src = src;
+      document.querySelectorAll('.mthumb').forEach(function(t){ t.classList.remove('active'); });
+      img.classList.add('active');
+    });
+    mThumbs.appendChild(img);
+  });
+
+  // Key specs
+  mKey.innerHTML = m.key.map(function(k){
+    return '<div class="kspec"><span class="ks-label">' + k[0] + '</span><span class="ks-val">' + k[1] + '</span></div>';
+  }).join('');
+
+  // Specs table
+  mSpecs.innerHTML = m.specs.map(function(s){
+    return '<tr><td>' + s[0] + '</td><td>' + s[1] + '</td></tr>';
+  }).join('');
+
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(){
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('modal-close-btn').addEventListener('click', closeModal);
+modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+document.getElementById('m-contact-btn').addEventListener('click', closeModal);
+
+document.addEventListener('click', function(e){
+  if(e.target.classList.contains('mc-btn-ficha')){
+    openModal(e.target.getAttribute('data-id'));
+  }
+});
+
+/* ---- Navbar ---- */
+var navbar = document.getElementById('navbar');
+var progress = document.getElementById('scroll-progress');
+var btt = document.getElementById('btt');
+window.addEventListener('scroll', function(){
+  var sy = window.scrollY;
+  var dh = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.width = (dh>0?sy/dh*100:0)+'%';
+  navbar.classList.toggle('scrolled', sy>60);
+  btt.classList.toggle('on', sy>500);
+},{passive:true});
+btt.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+
+/* ---- Mobile Menu ---- */
+var ham = document.getElementById('hamburger');
+var overlay = document.getElementById('nav-overlay');
+ham.addEventListener('click', function(){
+  ham.classList.toggle('active');
+  overlay.classList.toggle('open');
+  document.body.style.overflow = overlay.classList.contains('open')?'hidden':'';
+});
+document.querySelectorAll('.ovl').forEach(function(a){
+  a.addEventListener('click', function(){
+    ham.classList.remove('active');
+    overlay.classList.remove('open');
+    document.body.style.overflow='';
+  });
+});
+
+/* ---- Scroll Reveal ---- */
+var revEls = document.querySelectorAll('.reveal,.reveal-l,.reveal-r');
+if('IntersectionObserver' in window){
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); obs.unobserve(e.target); } });
+  },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+  revEls.forEach(function(el){ obs.observe(el); });
+} else {
+  revEls.forEach(function(el){ el.classList.add('on'); });
+}
+
+/* ---- Hero Canvas ---- */
+(function(){
+  var c = document.getElementById('hero-canvas');
+  var ctx = c.getContext('2d');
+  var pts = []; var raf;
+  function resize(){ c.width=window.innerWidth; c.height=window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize, {passive:true});
+  for(var i=0;i<75;i++) pts.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.4+.3,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,a:Math.random()*.38+.08,gold:Math.random()>.72});
+  function draw(){
+    ctx.clearRect(0,0,c.width,c.height);
+    pts.forEach(function(p){
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=p.gold?'rgba(201,168,76,'+p.a+')':'rgba(245,245,245,'+p.a+')';
+      ctx.fill();
+      p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0)p.x=c.width; if(p.x>c.width)p.x=0;
+      if(p.y<0)p.y=c.height; if(p.y>c.height)p.y=0;
+    });
+    raf=requestAnimationFrame(draw);
+  }
+  draw();
+  new IntersectionObserver(function(e){ if(e[0].isIntersecting){if(!raf)draw();}else{cancelAnimationFrame(raf);raf=null;} }).observe(document.getElementById('hero'));
+})();
+
+/* ---- Hero Video Carousel ---- */
+(function(){
+  var vids = document.querySelectorAll('.hvid');
+  if(!vids.length) return;
+  var cur = 0;
+  var firstTimer = null;
+  function switchNext(){
+    if(firstTimer){clearTimeout(firstTimer);firstTimer=null;}
+    vids[cur].classList.remove('active');
+    vids[cur].pause();
+    cur = (cur + 1) % vids.length;
+    vids[cur].classList.add('active');
+    vids[cur].currentTime = 0;
+    vids[cur].play().catch(function(){});
+  }
+  vids.forEach(function(v,i){
+    v.addEventListener('ended', function(){
+      if(v.classList.contains('active') && i !== 0) switchNext();
+    });
+  });
+  vids[0].play().catch(function(){});
+  firstTimer = setTimeout(switchNext, 10000);
+})();
+
+/* ---- Nosotros Carousel ---- */
+(function(){
+  var slides = document.querySelectorAll('#nc-wrap .nc-slide');
+  var dots = document.querySelectorAll('#nc-dots .nc-dot');
+  var cur = 0; var timer;
+  function go(n){
+    slides[cur].classList.remove('active');
+    dots[cur].classList.remove('on');
+    cur = (n + slides.length) % slides.length;
+    slides[cur].classList.add('active');
+    dots[cur].classList.add('on');
+  }
+  function next(){ go(cur+1); }
+  function prev(){ go(cur-1); }
+  function start(){ timer = setInterval(next, 4000); }
+  function stop(){ clearInterval(timer); }
+  var btnNext = document.querySelector('#nc-wrap .nc-next');
+  var btnPrev = document.querySelector('#nc-wrap .nc-prev');
+  if(btnNext) btnNext.addEventListener('click', function(){ stop(); next(); start(); });
+  if(btnPrev) btnPrev.addEventListener('click', function(){ stop(); prev(); start(); });
+  dots.forEach(function(d, i){
+    d.addEventListener('click', function(){ stop(); go(i); start(); });
+  });
+  start();
+})();
+
+/* ---- Multi-Image Card Cycles ---- */
+(function(){
+  // Cat-grid cards with multiple slides (Camiones, Grúas)
+  document.querySelectorAll('.cat-img').forEach(function(container){
+    var slides = container.querySelectorAll('.cat-img-slide');
+    if(slides.length < 2) return;
+    var cur = 0;
+    setInterval(function(){
+      slides[cur].classList.remove('active');
+      cur = (cur + 1) % slides.length;
+      slides[cur].classList.add('active');
+    }, 3500);
+  });
+  // Fletes image cycle
+  (function(){
+    var imgs = document.querySelectorAll('.fletes-img img:not(.fletes-img-overlay)');
+    // filter only img elements
+    var imgArr = Array.prototype.filter.call(
+      document.querySelectorAll('.fletes-img img'), function(){ return true; }
+    );
+    if(imgArr.length < 2) return;
+    var cur = 0;
+    setInterval(function(){
+      imgArr[cur].classList.remove('active');
+      cur = (cur + 1) % imgArr.length;
+      imgArr[cur].classList.add('active');
+    }, 4500);
+  })();
+  // Luminarias image cycle
+  (function(){
+    var imgs = document.querySelectorAll('.lum-img-wrap img');
+    if(imgs.length < 2) return;
+    var cur = 0;
+    setInterval(function(){
+      imgs[cur].classList.remove('active');
+      cur = (cur + 1) % imgs.length;
+      imgs[cur].classList.add('active');
+    }, 5000);
+  })();
+})();
+
+/* ---- Contact Form ---- */
+var form = document.getElementById('contact-form');
+var formOk = document.getElementById('form-ok');
+var submitBtn = document.getElementById('f-submit');
+function isEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); }
+function setErr(id,show){ document.getElementById('fg-'+id).classList.toggle('err',show); return !show; }
+function validate(){
+  var ok=true;
+  if(document.getElementById('f-nombre').value.trim().length<2){ setErr('nombre',true); ok=false; } else setErr('nombre',false);
+  if(!isEmail(document.getElementById('f-email').value.trim())){ setErr('email',true); ok=false; } else setErr('email',false);
+  if(!document.getElementById('f-interes').value){ setErr('interes',true); ok=false; } else setErr('interes',false);
+  if(document.getElementById('f-mensaje').value.trim().length<10){ setErr('mensaje',true); ok=false; } else setErr('mensaje',false);
+  return ok;
+}
+['nombre','email','interes','mensaje'].forEach(function(id){
+  var el=document.getElementById('f-'+id);
+  if(el) el.addEventListener('input',function(){ setErr(id,false); });
+});
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  if(!validate()) return;
+  var honey=form.querySelector('[name="_honey"]');
+  if(honey&&honey.value) return;
+  submitBtn.textContent='Enviando...'; submitBtn.disabled=true; submitBtn.style.opacity='.65';
+  fetch('https://formsubmit.co/ajax/lj.manjarrez@gecc.com.mx',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
+  .then(function(r){ if(!r.ok) throw new Error(); return r.json(); })
+  .then(function(){ form.style.display='none'; formOk.style.display='block'; })
+  .catch(function(){
+    submitBtn.disabled=false; submitBtn.style.opacity='1';
+    submitBtn.textContent='Error — Intente de Nuevo'; submitBtn.style.background='#b03030';
+    setTimeout(function(){ submitBtn.textContent='Enviar Mensaje'; submitBtn.style.background=''; },3500);
+  });
+});
+
+})();
+
+/* ---- Dolores Video Sequence ---- */
+(function(){
+  var v0 = document.getElementById('dol-vid-0');
+  var v1 = document.getElementById('dol-vid-1');
+  if(!v0 || !v1) return;
+  function show(a, b){
+    a.classList.add('active');
+    b.classList.remove('active');
+  }
+  v0.addEventListener('ended', function(){
+    show(v1, v0);
+    v1.currentTime = 0;
+    v1.play().catch(function(){});
+  });
+  v1.addEventListener('ended', function(){
+    show(v0, v1);
+    v0.currentTime = 0;
+    v0.play().catch(function(){});
+  });
+  v0.play().catch(function(){});
+})();
+
+/* ---- Fletes Image Carousel ---- */
+(function(){
+  var slides = document.querySelectorAll('.fletes-img-slide');
+  if(slides.length < 2) return;
+  var cur = 0;
+  setInterval(function(){
+    slides[cur].classList.remove('active');
+    cur = (cur + 1) % slides.length;
+    slides[cur].classList.add('active');
+  }, 3000);
+})();
+
+/* ---- Hero Parallax ---- */
+(function(){
+  var hv = document.getElementById('hero-videos');
+  if(!hv) return;
+  var ticking = false;
+  window.addEventListener('scroll', function(){
+    if(ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var sy = window.scrollY;
+      hv.style.transform = 'translateY('+Math.round(sy*0.28)+'px)';
+      ticking = false;
+    });
+  }, {passive:true});
+})();
+
+</script>
+</body>
+</html>

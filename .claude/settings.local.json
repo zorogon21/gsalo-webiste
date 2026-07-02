@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(start \"c:\\\\Users\\\\manja\\\\OneDrive\\\\WEBSITE EMPRESA\\\\index.html\")",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\manja\\\\OneDrive\\\\WEBSITE EMPRESA\\\\420F\" -Force)",
+      "PowerShell(Test-Path \"c:\\\\Users\\\\manja\\\\OneDrive\\\\WEBSITE EMPRESA\" | Write-Host \"Existe carpeta raíz: $_\"; Get-ChildItem -Path \"c:\\\\Users\\\\manja\\\\OneDrive\\\\WEBSITE EMPRESA\" -Directory)",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\manja\\\\OneDrive\\\\WEBSITE EMPRESA\" -File -Force | Where-Object { $_.Name -ne \".DS_Store\" } | Select-Object Name, @{N=\"Tamaño\";E={\"{0:N2} KB\" -f \\($_.Length / 1KB\\)}} | Format-Table -AutoSize)",
+      "Bash(Get-ChildItem \"c:\\\\Users\\\\manja\\\\OneDrive\\\\WEBSITE EMPRESA\\\\EMPRESAS LOGOS\")",
+      "Bash(Select-Object Name, Extension)",
+      "Bash(python3 \"c:\\\\Users\\\\manja\\\\OneDrive\\\\WEBSITE EMPRESA\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"noir gold premium enterprise construction infrastructure dark luxury motion parallax\" --design-system -p \"G-SALO\")",
+      "Bash(python \"c:\\\\Users\\\\manja\\\\OneDrive\\\\WEBSITE EMPRESA\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"noir gold premium enterprise construction infrastructure dark luxury motion parallax\" --design-system -p \"G-SALO\")",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\manja\\\\OneDrive\\\\WEBSITE EMPRESA\\\\VIDEOS WEBSITE\\\\\" | Where-Object { $_.Name -match \"bull|estaca|dolores\" } | Select-Object Name)",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}
